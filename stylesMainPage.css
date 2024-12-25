@@ -1,0 +1,830 @@
+@font-face {
+    font-family: 'Yekan Bakh FaNum';
+    src: url('Fonts/Yekan_Bakh_Fanum_Extra_Bold.TTF') format('truetype');
+    font-weight: 900; 
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Yekan Bakh FaNum';
+    src: url('/Fonts/Yekan_Bakh_Fanum_Heavy.TTF') format('truetype');
+    font-weight: 400; 
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Modam';
+    src: url('/Fonts/Modam-ExtraBold.ttf') format('truetype');
+    font-weight: 700; 
+    font-style: normal;
+}
+body{
+    position: absolute;
+    background: #F9F9F9;
+    margin: 0;
+    padding: 0;
+}
+.header {
+position: absolute;
+display: flex;
+width: 1256px;
+height: 95px;
+left:  144px;
+top: 50px;
+align-items: center;
+background-color: #FFFFFF;
+box-shadow: 0px 11px 200px rgba(0, 0, 0, 0.1);
+border-radius: 20px;
+}
+
+.header-container{
+    width: 1179px;
+    height: 59px;
+    right: 18px;
+    top: 34px;
+    background: #FFFFFF;
+    box-shadow: 0px 11px 200px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    display: flex;
+    align-items: center; 
+    justify-content: space-between;
+    padding: 0 20px;
+    }
+    
+.login {
+    width: 166px;
+    height: 52px;
+    top: 54px;
+    margin-top: 47.5px;
+    background: #3A31C2;
+    color: #F9F9F9;
+    font-family:  'Yekan Bakh FaNum' ,sans-serif;
+    font-style: normal;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 28px;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: opacity 0.2s;
+    transform: translateY(-50%); 
+    left: 0; 
+}
+.login:hover{
+    opacity: 0.8;
+    background-color: #130d6e;
+}
+.header-container{
+width: 1179px;
+height: 59px;
+right: 18px;
+top: 34px;
+background: #FFFFFF;
+box-shadow: 0px 11px 200px rgba(0, 0, 0, 0.1);
+border-radius: 20px;
+display: flex;
+align-items: center; 
+justify-content: space-between;
+padding: 0 20px;
+}
+.logo img {
+    height: 59px;
+    width: auto;
+    margin-right: 200px;
+}
+
+#headerIcon {
+    width: 52px;
+    height: 52px;
+    left: 342px;
+    margin-right: 250px;
+    background: #D5E7B5;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition:  opicity 0.2s;
+    cursor: pointer;
+}
+#headerIcon:hover{
+
+    opacity: 0.7;
+}
+#headerIcon img {
+    width: 24px;
+    height: 24px;
+}
+.nav {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item a {
+    font-family: 'Yekan Bakh FaNum', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: #000;
+    text-decoration: none;
+}
+
+.nav-item a:hover {
+    color: #3A31C2;
+}
+/*
+@media (max-width:) {
+    
+}
+*/
+main {
+    position: relative;
+    display: block;
+    margin: 0;
+    padding-top: 95px; 
+}
+.hero-stats {
+    flex-direction: column;
+    position: absolute;
+    width: 126px;
+    height: auto;
+    left: 120px;
+    top: 225px;
+    align-items: center;
+    opacity: 100%; 
+    border-radius: 0; 
+}
+.stat-item{
+    align-items: center;
+    padding: 5px;
+}
+.stat-value{
+padding-left: 20px;
+padding-top: 0px;
+font-family: 'Yekan Bakh FaNum',;
+font-style: normal;
+font-weight: 900;
+font-size: 36px;
+line-height: 56px;
+}
+.stat-label-m{
+margin-left: -20px;
+}
+.stat-label-a{
+margin-left: -35px;
+}
+.stat-label-h{
+margin-left: -4px;
+}
+.stat-label-a, .stat-label-h, 
+.stat-label-m{
+    margin-top: -50px;
+    padding-left: 25px;
+    font-family: 'Yekan Bakh FaNum';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 28px;
+    color: #000000;
+}
+
+.hero-model{
+position: absolute;
+width: 468px;
+height: 502px;
+left: 318px;
+top: 161px;
+}
+.background-purple {
+    position: absolute;
+    width: 455px;
+    height: 453px; 
+    left: 0px; 
+    top: 34px;
+    background: #3A31C2; 
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); 
+    border-radius: 65px; 
+}
+.background-gradient {
+    position: absolute;
+    width: 455px; 
+    height: 453px; 
+    left: 17px; 
+    top: 49px; 
+    background: linear-gradient(142.29deg, #E5F2CD -24.32%, #D5E7B5 91.57%);
+    border-radius: 65px; 
+}
+.model-image {
+    position: absolute;
+    width: 393px;
+    height: 502px; 
+    left: 48px; 
+    top: 0px;
+}
+.model-image img {
+    width: 100%; 
+    height: auto; 
+    border-radius: 65px; 
+}
+.hero-content {
+    position: absolute;
+    width: 500px;
+    height: auto;
+    left: 838px;
+    top: 304px;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; 
+}
+.hero-title {
+    font-family: 'Modam', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 53px;
+    line-height: 76px;
+    color: #000000;
+    margin: 0;
+}
+.hero-actions {
+    display: flex; 
+    align-items: center;
+    justify-content: flex-end;
+    gap: 40px; 
+    margin-top: 20px; 
+}
+.contact-link {
+    font-family: 'Yekan Bakh FaNum', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    text-decoration: none;
+    color: #3A31C2;
+    transition: color 0.3s;
+}
+.contact-link:hover {
+    color: #130d6e;
+}
+.hero-button {
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    gap: 5px; 
+    width: 300px;
+    height: 60px;
+    background: #3A31C2;
+    border: 1.5px solid #222d83;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+.hero-button:hover {
+    opacity: 0.8;
+    background-color: #161062;
+    box-shadow: #2d0410;
+}
+.button-text {
+    font-family: 'Yekan Bakh FaNum', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 28px;
+    color: #F9F9F9;
+}
+.button-icon img {
+    width: 50px;
+    height: 25px;
+}
+
+.features-subtitle {
+    position: absolute;
+    width: 116px;
+    height: 37px;
+    left: 662px;
+    top: 794px;
+    font-family: 'Yekan Bakh FaNum', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 37px;
+    text-align: center;
+    color: #000000;
+}
+.features-title {
+    position: absolute;
+    width: 471px;
+    height: 51px;
+    left: 484px;
+    top: 832px;
+    font-family: 'Modam', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 51px;
+    text-align: center;
+    color: #000000;
+}
+.card-wallet, .card-setting,
+.card-profile, .card-video-play{
+    position: absolute;
+    width: 270px;
+    height: 259px;
+    border-radius: 25px;
+    background: #FFFFFF;
+    transition: all 0.3s;
+    box-shadow: 0px 10px 200px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+} 
+.card-wallet, .card-video-play{
+    top: 914px;
+}
+.card-setting, .card-profile{
+    top: 984px;
+}
+.card-wallet:hover, .card-setting:hover,
+.card-profile:hover, .card-video-play:hover{
+    background: #E5F2CD; 
+    box-shadow: 0px 15px 50px rgba(58, 49, 194, 0.4); 
+    transform: translateY(-10px); 
+}
+.card-icon-wallet, .card-icon-setting,
+.card-icon-profile, .card-icon-video-play{
+    position: absolute;
+    width: 76px;
+    height: 76px;
+    left: 160px;
+    top: 32px;
+    background: #3A31C2;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s; 
+}
+.card-icon-wallet img, .card-icon-setting img,
+.card-icon-profile img, .card-video-play img{
+    width: 36px;
+    height: 36px;
+    transition: opacity 0.3s;
+}
+.card-wallet:hover .card-icon-wallet img,
+.card-setting:hover .card-icon-setting img,
+.card-profile:hover .card-icon-profile img,
+.card-video-play:hover .card-icon-video-play img {
+    opacity: 0;
+}
+.card-wallet:hover .card-icon-wallet,
+.card-setting:hover .card-icon-setting,
+.card-profile:hover .card-icon-profile,
+.card-video-play:hover .card-icon-video-play{
+    background-size: cover;
+    background-position: center;
+    transform: rotate(360deg);
+}
+.card-wallet {
+    left: 133px;
+}
+.card-wallet:hover .card-icon-wallet{
+    background-image: url('/pic/wallet.png'); 
+}
+.card-setting {
+    left: 434px;
+}
+.card-setting:hover .card-icon-setting{
+    background-image: url('/pic/settings.png'); 
+}
+.card-profile{
+    left: 735px;
+}
+.card-profile:hover .card-icon-profile{
+    background-image: url('/pic/profile.png'); 
+}
+.card-video-play{
+    left: 1036px;
+}
+.card-video-play:hover .card-icon-video-play{
+    background-image: url('/pic/videoplayer.png'); 
+}
+.card-text{
+    position: absolute;
+    width: 218px;
+    height: auto;
+    left: 26px;
+    top: 135px;
+    font-family: 'Yekan Bakh FaNum', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+    text-align: right;
+    color: #000000;
+}
+
+.courses-title {
+    position: absolute;
+    width: 253px;
+    height: 51px;
+    left: 1063px;
+    top: 1440px;
+    font-family: 'Modam', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 51px;
+    text-align: right;
+    color: #000000;
+}
+.line-1 {
+    position: absolute;
+    width: 329px;
+    height: 0px;
+    left: 711px;
+    top: 1472px;
+    border-top: 3px solid #3A31C2;
+}
+.line-1-diamond {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #3A31C2;
+    left: 700px; 
+    top: 1468px; 
+    transform: rotate(45deg); 
+}
+.courses-title {
+    position: absolute;
+    width: 253px;
+    height: 51px;
+    left: 1063px;
+    top: 1440px;
+    font-family: 'Modam', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 51px;
+    text-align: right;
+    color: #000000;
+}
+.line-1 {
+    position: absolute;
+    width: 329px;
+    height: 0px;
+    left: 711px;
+    top: 1472px;
+    border-top: 3px solid #3A31C2;
+}
+.line-1-diamond {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #3A31C2;
+    left: 700px;
+    top: 1468px;
+    transform: rotate(45deg);
+}
+.course-tabs {
+    position: absolute;
+    top: 1445px;
+    display: flex;
+    gap: 20px;
+    left: 95px;
+}
+.tab {
+    width: 126px;
+    height: 53px;
+    background: #3A31C2;
+    border-radius: 10px;
+    border: none;
+    font-family: 'Yekan Bakh FaNum', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+    text-align: center;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.tab:hover {
+    background: #D3E2B5;
+    color: #000000;
+}
+
+.course-card {
+    position: absolute;
+    width: 280.9px;
+    height: 423px;
+    background: #F9F9F9;
+    box-shadow: 0px 11px 198.9px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all 0.3s;
+    box-shadow: 0px 10px 200px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+.course-card:hover{
+    background: #E5F2CD; 
+    box-shadow: 0px 15px 50px rgba(58, 49, 194, 0.4); 
+    transform: translateY(-10px); 
+}
+.card-1 {
+    left: 1033px;
+    top: 1568px;
+}
+.card-2 {
+    left: 734px;
+    top: 1568px;
+}
+.card-3 {
+    left: 434px;
+    top: 1568px;
+}
+
+.card-4 {
+    left: 133px;
+    top: 1568px;
+}
+.card-image {
+    position: absolute;
+    width: 255.36px;
+    height: 178px;
+    background: #3A31C2;
+    border-radius: 20px;
+    top: 18px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.card-image img {
+    width: 70px;
+    height: 63.73px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.course-title {
+    position: absolute;
+    width: 100%;
+    top: 205px;
+    text-align: center;
+    font-family: 'Yekan Bakh FaNum';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18.6px;
+    line-height: 28px;
+    color: #0E1E36;
+}
+.course-description {
+    position: absolute;
+    width: 247px;
+    top: 245px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Yekan Bakh FaNum';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 25px;
+    text-align: right;
+    color: #000000;
+    opacity: 0.8;
+}
+.course-footer {
+    position: absolute;
+    width: 90%;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+}
+.author-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 10px;
+}
+.author-icon {
+    width: 23.57px;
+    height: 24px;
+    opacity: 0.8;
+}
+.author-name {
+    margin-left: auto;
+    font-family: 'Yekan Bakh FaNum', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #0E1E36;
+}
+.like-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+.like-button img {
+    width: 23.57px;
+    height: 24px;
+    transition:  0.3s;
+    cursor: pointer;
+}
+.footer-line {
+    width: 100%;
+    height: 1px;
+    background: rgba(0, 0, 0, 0.3);
+}
+.course-stats {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.students-info {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.students-icon {
+    width: 23.57px;
+    height: 24px;
+    opacity: 0.8;
+}
+.students-count {
+    font-family: 'Yekan Bakh FaNum';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #0E1E36;
+    opacity: 0.8;
+}
+.course-price {
+    font-family: 'Yekan Bakh FaNum';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #4F986C;
+}
+.footer {
+    position:absolute; 
+    width: 1440px;
+    height: 514px; 
+    left: 0;
+    top: 2219px; 
+    box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.05);
+    padding: 20px 50px; 
+}
+.logo-section {
+    display: flex; 
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px; 
+    position: absolute;
+    top: 60px; 
+    right: 230px;
+    height: 60px; 
+}
+.logo-img {
+    width: 64px; 
+    height: auto;
+}
+.logo-text {
+    text-align: right; 
+}
+.logo-text h3 {
+    font-size: 24px;
+    font-weight: 600; 
+    font-family: 'Modam', sans-serif; 
+    margin: 0; 
+    color: #000000; 
+}
+.logo-text p {
+    padding-top: 5px;
+    font-size: 20px;
+    font-weight: 400; 
+    margin: 0; 
+    color: #555555; 
+}
+.social-icons {
+    position: relative; 
+    width: 500px; 
+    height: 100px; 
+    margin: 0; 
+    top: 45px;  
+}
+.icon{
+    position: absolute;
+    width: 52px;
+    height: 52px;
+    background: #D5E7B5;
+    border-radius: 5px;
+    top: 0px;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+.icon:hover{
+background: #3A31C2;
+}
+.youtube {
+    left: 300px;
+}
+.whatsapp{
+    left: 233px;
+}
+.instagram{
+    left: 99px; 
+}
+.facebook {
+    left: 166px;
+}
+.social-icons img {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+}
+ .divider {
+    position: absolute; 
+    width: 1163px;
+    height: 0px;
+    left: 145px; 
+    top: 200px; 
+    border: 0.5px solid #000000; 
+    opacity: 0.3; 
+    transform: rotate(180deg);
+}
+.footer-bottom {
+    display: flex; 
+    justify-content: space-between; 
+    gap:20px; 
+    text-align: right; 
+    direction: rtl; 
+    margin-top: 100px;
+    margin-right: 135px;
+}
+.column1{
+ margin-right: 40px;
+ margin-top: 10px;
+ width: 394px;
+ height: 100px;
+}
+.column4{
+    margin-left: 70px;
+ }
+.footer-column {
+    flex: 1;
+    padding: 10px 40px; 
+}
+.column4,.column3 ul li{
+padding: 6px;
+}
+.column1 h4,.footer-column h4 {
+    font-family: 'Yekan Bakh FaNum';
+    font-size: 20px; 
+    font-weight: 500; 
+    margin-bottom: 15px; 
+    color: #000000;
+    text-align: right; 
+}
+.footer-column ul {
+    list-style: none; 
+    padding: 0;
+    margin: 0;
+}
+.footer-column ul li {
+    display: flex; 
+    align-items: center;
+    justify-content: flex-start; 
+    margin-bottom: 10px;
+    font-size: 16px; 
+    color: #000000; 
+    opacity: 0.8; 
+    text-align: right; 
+}
+.column4 ul li{
+    justify-content:flex-end; 
+    text-align: left;
+}
+.footer-column ul li img {
+    width: 24px; 
+    height: 24px; 
+    margin-left: 10px;
+}
+
+.footer-column p {
+    font-size: 16px;
+    line-height: 20px; 
+    color: #555555; 
+    opacity: 0.8;
+    text-align: right; 
+}

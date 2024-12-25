@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>دوره‌های آموزشی</title>
+    <link rel="stylesheet" href="stylesCoursePage.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-container">
+            <button class="login">ورود / ثبت نام</button>
+            <img src="/pic/headerIcon.svg" id="headerIcon" alt="icon">
+            <div class="logo">
+                <img src="/pic/logo.svg" alt="لوگو آکادمی">
+            </div>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="#">درباره ما</a></li>
+                    <li class="nav-item"><a href="#">دوره‌های آموزشی</a></li>
+                    <li class="nav-item"><a href="#">صفحه اصلی</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="main">
+            <nav aria-label="breadcrumb" class="breadcrumb">
+                <ul>
+                    <li aria-current="page">آموزش زبان پایتون</li>
+                    <li><a href="/backend">/ دسته‌بندی بک‌اند</a></li>
+                    <li><a href="/courses">/ دوره‌ها</a></li>
+                    <li><a href="mainPage.html">/ صفحه اصلی</a></li>
+                </ul>
+            </nav>
+            <div class="divider body"></div>
+            <section class="video-section">
+                <div class="video-cover">
+                  <video class="video-player">
+                    <source src="video.mp4" type="video/mp4">
+                    <source src="video.webm" type="video/webm">
+                    مرورگر شما از پخش این ویدیو پشتیبانی نمی‌کند.
+                  </video>
+                   <div class="play-icon"><img src="/pic/play.svg" alt="Play Icon"></div>
+                  </div>
+              </section>
+                <!--javaScript:const videoCover = document.querySelector(".video-cover");
+               const videoPlayer = document.querySelector(".video-player");
+               const playIcon = document.querySelector(".play-icon");
+
+               playIcon.addEventListener("click", () => {
+               videoCover.classList.add("playing");
+               videoPlayer.play();
+               });-->
+               <section class="course-info">
+                <div class="info-box">
+                  <p class="course-label">قیمت دوره :</p>
+                  <span class="course-price">۲۳۷ هزار تومان</span>
+                  <div class="divider info"></div>
+                  <button class="add-to-card">
+                    <img src="/pic/basket.svg" alt="Shopping Bag Icon">
+                    افزودن به سبد خرید
+                  </button>
+                  <button class="add-to-favorites"><img src="/pic/like.svg" alt="Add to Favorites"></button>
+                </div>
+        </section>
+        <section class="course-details">
+            <div class="detail-item">
+              <img src="/pic/clock.svg" alt="Duration Icon" class="detail-icon">
+              <span class="detail-title">مدت زمان دوره:</span>
+              <span class="detail-value">22 ساعت</span>
+            </div>
+            <div class="divider details1"></div>
+            <div class="detail-item">
+              <img src="/pic/sessions.svg" alt="Sessions Icon" class="detail-icon">
+              <span class="detail-title">تعداد جلسات دوره:</span>
+              <span class="detail-value">91 جلسه</span>
+            </div>
+            <div class="divider details2"></div>
+            <div class="detail-item">
+              <img src="/pic/download.svg" alt="Download Icon" class="detail-icon">
+              <span class="detail-title">نحوه دیدن دوره:</span>
+              <span class="detail-value">به صورت دانلودی</span>
+            </div>
+            <div class="divider details3"></div>
+            <div class="detail-item">
+              <img src="/pic/prerequisite.svg" alt="Prerequisite Icon" class="detail-icon">
+              <span class="detail-title">پیش نیاز دوره:</span>
+              <span class="detail-value">پیش نیازی ندارد</span>
+            </div>
+            <div class="divider details4"></div>
+            <div class="detail-item">
+              <img src="/pic/students.svg" alt="Students Icon" class="detail-icon">
+              <span class="detail-title">تعداد دانشجویان دوره:</span>
+              <span class="detail-value">129 نفر</span>
+            </div>
+          </section>
+         
+          <section class="course-description-section">
+  <div class="course-description-box">
+    <h2 class="course-title">دوره آموزشی برنامه نویسی پایتون</h2>
+    <p class="course-introduction">
+      لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون
+      بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف
+      بهبود ابزارهای کاربردی می باشد.
+    </p>
+    <h3 class="description-title">توضیحات دوره</h3>
+    <p class="course-description">
+      لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون
+      بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع
+      با هدف بهبود ابزارهای کاربردی می باشد.
+    </p>
+    <p class="course-description">
+      کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها
+      شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد. 
+      در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد
+      و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد
+      استفاده قرار گیرد.
+    </p>
+  </div>
+ </section>
+</main>
+<footer class="footer">
+    <div class="footer-top">
+        <div class="logo-section">
+            <div class="logo-text">
+                <h3>برنامه‌نویسی</h3>
+                <p>barmanenevis.ir</p>
+            </div><img src="/pic/logo.svg" alt="لوگو سایت"></div>
+            <div class="social-icons">
+                <div class="icon youtube"><img src="/pic/youtube.svg" alt="یوتیوب"></div>
+                <div class="icon whatsapp"><img src="/pic/whatsapp.svg" alt="واتساپ"></div>
+                <div class="icon facebook"><img src="/pic/facebook.svg" alt="فیسبوک"></div>
+                <div class="icon instagram"><img src="/pic/instagram.svg" alt="اینستاگرام">
+                </div>
+            </div> 
+    </div>                   
+    <div class="divider-fotter"></div>
+    <div class="footer-bottom">
+        <div id="about" class="column1">
+            <h4>درباره ما</h4>
+            <p>شروع هرچیزی سخته، ولی وقتی مسیر درستی رو انتخاب کنی،با خیال راحت و بدون استرس میتونی از مسیر لذت ببری. ما در دنیای برنامه نویسی، توی سفر به دنیای برنامه نویسی کنارت هستیم تا باهم رشد کنیم و از نتیجه زحمات مون لذت ببریم.</p>
+        </div>
+        <div class="footer-column column2">
+            <h4>دوره‌های پرطرفدار</h4>
+            <ul>
+                <li>آموزش زبان پایتون</li>
+                <li>آموزش جاوا اسکریپت</li>
+                <li>آموزش React JS</li>
+            </ul>
+        </div> 
+        <div class="footer-column column3">
+            <h4>اساتید دوره‌ها</h4>
+            <ul>
+                <li>ابوالفضل هادی‌نژاد</li>
+                <li>مسیح مصطفیی</li>
+                <li>امیرحسین حمیدی</li>
+                <li>حسین مفیدی</li>
+            </ul>
+        </div>  
+        <div id="contact" class="footer-column column4">
+            <h4>ارتباط با ما</h4>
+            <ul>
+                <li>
+                    <a href="admin@barnamenevis.ir">admin@barnamenevis.ir</a>
+                   <img src="/pic/email.svg" alt="ایمیل">  
+                </li>
+                <li>
+                    <a href="abolfazl.hadinjad@">abolfazl.hadinjad@</a>
+                    <img src="/pic/telegram.svg" alt="تلگرام">
+                </li>
+            </ul>
+        </div> 
+    </div>
+</body>
+</html>
