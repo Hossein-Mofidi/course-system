@@ -6,13 +6,13 @@
 }
 @font-face {
     font-family: 'Yekan Bakh FaNum';
-    src: url('/Fonts/Yekan_Bakh_Fanum_Heavy.TTF') format('truetype');
+    src: url('/frontend/Fonts/Yekan_Bakh_Fanum_Heavy.TTF') format('truetype');
     font-weight: 400; 
     font-style: normal;
 }
 @font-face {
     font-family: 'Modam';
-    src: url('/Fonts/Modam-ExtraBold.ttf') format('truetype');
+    src: url('/frontend/Fonts/Modam-ExtraBold.ttf') format('truetype');
     font-weight: 700; 
     font-style: normal;
 }
@@ -391,25 +391,25 @@ top: 161px;
     left: 133px;
 }
 .card-wallet:hover .card-icon-wallet{
-    background-image: url('/pic/wallet.png'); 
+    background-image: url('/frontend/pic/wallet.png');
 }
 .card-setting {
     left: 434px;
 }
 .card-setting:hover .card-icon-setting{
-    background-image: url('/pic/settings.png'); 
+    background-image: url('/frontend/pic/settings.png');
 }
 .card-profile{
     left: 735px;
 }
 .card-profile:hover .card-icon-profile{
-    background-image: url('/pic/profile.png'); 
+    background-image: url('/frontend/pic/profile.png');
 }
 .card-video-play{
     left: 1036px;
 }
 .card-video-play:hover .card-icon-video-play{
-    background-image: url('/pic/videoplayer.png'); 
+    background-image: url('/frontend/pic/videoplayer.png');
 }
 .card-text{
     position: absolute;
