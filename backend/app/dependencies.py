@@ -8,6 +8,7 @@ from jwt import InvalidTokenError
 from pydantic import BaseModel
 from sqlmodel import create_engine, SQLModel, Session
 from models import user_model
+from models.user_model import User
 
 DATABASE_URL = "postgresql://course:abolHossein3x2498@localhost/course_management"
 SECRET_KEY = "19a5a186bfb38e8c61bcda41c73c4e644f74463ed42062534cb9a735e67c5b71"
