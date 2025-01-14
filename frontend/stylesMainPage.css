@@ -6,13 +6,13 @@
 }
 @font-face {
     font-family: 'Yekan Bakh FaNum';
-    src: url('/frontend/Fonts/Yekan_Bakh_Fanum_Heavy.TTF') format('truetype');
+    src: url('/Fonts/Yekan_Bakh_Fanum_Heavy.TTF') format('truetype');
     font-weight: 400; 
     font-style: normal;
 }
 @font-face {
     font-family: 'Modam';
-    src: url('/frontend/Fonts/Modam-ExtraBold.ttf') format('truetype');
+    src: url('/Fonts/Modam-ExtraBold.ttf') format('truetype');
     font-weight: 700; 
     font-style: normal;
 }
@@ -49,7 +49,7 @@ border-radius: 20px;
     padding: 0 20px;
     }
     
-.login {
+#login-signup-btn {
     width: 166px;
     height: 52px;
     top: 54px;
@@ -69,7 +69,7 @@ border-radius: 20px;
     transform: translateY(-50%); 
     left: 0; 
 }
-.login:hover{
+#login-signup-btn:hover{
     opacity: 0.8;
     background-color: #130d6e;
 }
@@ -391,25 +391,25 @@ top: 161px;
     left: 133px;
 }
 .card-wallet:hover .card-icon-wallet{
-    background-image: url('/frontend/pic/wallet.png');
+    background-image: url('/pic/wallet.png'); 
 }
 .card-setting {
     left: 434px;
 }
 .card-setting:hover .card-icon-setting{
-    background-image: url('/frontend/pic/settings.png');
+    background-image: url('/pic/settings.png'); 
 }
 .card-profile{
     left: 735px;
 }
 .card-profile:hover .card-icon-profile{
-    background-image: url('/frontend/pic/profile.png');
+    background-image: url('/pic/profile.png'); 
 }
 .card-video-play{
     left: 1036px;
 }
 .card-video-play:hover .card-icon-video-play{
-    background-image: url('/frontend/pic/videoplayer.png');
+    background-image: url('/pic/videoplayer.png'); 
 }
 .card-text{
     position: absolute;
@@ -514,6 +514,11 @@ top: 161px;
     cursor: pointer;
 }
 .tab:hover {
+    background: #D3E2B5;
+    color: #000000;
+}
+
+.active-tab{
     background: #D3E2B5;
     color: #000000;
 }
@@ -753,6 +758,11 @@ background: #3A31C2;
     left: 50%; 
     transform: translate(-50%, -50%); 
 }
+.card {
+    padding: 1rem;
+    border: 1px solid black;
+    margin: 1rem;
+    }
  .divider {
     position: absolute; 
     width: 1163px;
@@ -828,3 +838,452 @@ padding: 6px;
     opacity: 0.8;
     text-align: right; 
 }
+.displaynone{
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+.video-container {
+    position: absolute;
+    width: 797px;
+    height: 463px;
+    left: 513px;
+    top: 271px;
+}
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #3A31C2;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.video-element {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    z-index: 1;
+    display: none; 
+}
+.play-trigger img {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+.play-trigger:hover {
+    transform: scale(1.1); 
+}
+.video-wrapper.active .video-element {
+    display: block;
+}
+.video-wrapper.active .play-trigger {
+    display: none;
+}
+.course-overview {
+    position: absolute;
+    width: 332px;
+    height: 214px;
+    left: 142px;
+    top: 271px;
+}
+.overview-box {
+    position: relative;
+    background: #FFFFFF;
+    box-shadow: 0px 11px 200px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+}
+.price-heading {
+    position: absolute;
+    white-space: nowrap;
+    direction: rtl; 
+    width: 79px;
+    height: 28px;
+    left: 220px;
+    top: 25px;
+    font-family: 'Yekan Bakh FaNum', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+    text-align: right;
+    color: #000000;
+}
+.price-tag {
+    position: absolute;
+    white-space: nowrap;
+    direction: rtl; 
+    width: 97.23px;
+    height: 20px;
+    left: 40px; 
+    top: 45px;
+    font-family: 'Yekan Bakh FaNum', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    color: #4F986C;
+}
+.separator.overview-separator {
+    position: absolute;
+    width: 286px;
+    left: 20px;
+    top: 100px;
+}
+.add-to-basket {
+    position: absolute;
+    width: 223px;
+    height: 52px;
+    left: 90px; 
+    top: 130px;
+    background-color: #4F986C;
+    color: #FFFFFF;
+    border: 1.4px solid #FFFFFF;
+    border-radius: 5px;
+    font-family: 'Yekan Bakh FaNum', sans-serif;
+    font-size: 18px;
+    cursor: pointer;
+    text-align: center;
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    transition: background-color 0.3s ease;
+}
+.add-to-basket:hover {
+    background-color: #347254;
+}
+.mark-favorite {
+    position: absolute;
+    width: 52px;
+    height: 52px;
+    left: 30px; 
+    top: 130px;
+    background: none;
+    border: 0.5px solid rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+}
+.mark-favorite img {
+    width: 26px;
+    height: 26px;
+}
+.details-container {
+    position: absolute;
+    width: 291px;
+    height: 376px;
+    left: 141px;
+    top: 509px;
+    background: #FFFFFF;
+    box-shadow: 0px 11px 200px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+.details-item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0px 10px;
+    direction: rtl;
+}
+.details-icon {
+    width: 24px;
+    height: 24px;
+}
+.details-title {
+    font-family: 'Yekan Bakh FaNum', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #000000;
+} 
+.details-value {
+    font-family: 'Yekan Bakh FaNum', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #000000;
+    opacity: 0.6;
+}
+.description-wrapper {
+    position: absolute;
+    display: flex;
+    width: 797px;
+    height: 577px;
+    left: 513px;
+    top: 774px;
+}
+.description-container {
+    background: #FFFFFF;
+    box-shadow: 0px 11px 200px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.description-heading {
+    font-family: 'Yekan Bakh FaNum', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    text-align: right;
+    color: #000000;
+    margin: 0;
+}
+
+.section-title {
+    font-family: 'Yekan Bakh FaNum', sans-serif;
+    direction: rtl;
+    font-size: 20px;
+    font-weight: 500;
+    text-align: right;
+    color: #000000;
+    margin: 20px 0 0 0;
+}
+
+.intro-text, .content-text {
+    direction: rtl;
+    font-family: 'Yekan Bakh FaNum', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+    text-align: right;
+    color: #555555;
+    margin: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.login-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f8f9fa;
+    direction: rtl;
+}
+
+.containerLogin {
+    width: 100%;
+    max-width: 400px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+}
+
+.logologin {
+    margin-bottom: 20px;
+}
+
+.logo img {
+    max-width: 60px;
+}
+
+.h1-login {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.p-login {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.form-grouppp {
+    margin-bottom: 15px;
+}
+
+.form-grouppp input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.form-grouppp .icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.btn-login {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: #4a5bcf;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-login:hover {
+    background-color: #3949ab;
+}
+
+.link {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.link a {
+    color: #4caf50;
+    text-decoration: none;
+}
+
+.link a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.body-signup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f8f9fa;
+    direction: rtl;
+}
+
+.containerSignup {
+    width: 100%;
+    max-width: 400px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+}
+
+.logosignup {
+    margin-bottom: 20px;
+}
+
+.logo img {
+    max-width: 60px;
+}
+
+h1 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.p-signup {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.form-groupp {
+    margin-bottom: 15px;
+}
+
+.form-groupp input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.form-groupp .icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: #4a5bcf;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-submit:hover {
+    background-color: #3949ab;
+}
+
+.linkkkkk {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.linkkkkk a {
+    color: #4caf50;
+    text-decoration: none;
+}
+
+.linkkkkk a:hover {
+    text-decoration: underline;
+}
+
+
+

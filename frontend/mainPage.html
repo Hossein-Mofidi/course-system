@@ -7,12 +7,13 @@
     <link rel="stylesheet" href="stylesMainPage.css">
 </head>
 <body id="top">
+    <div id="maindisplaynone">
     <header class="header">
         <div class="header-container">
-            <button class="login">ورود / ثبت نام</button>
-            <img src="/frontend/pic/headerIcon.svg" id="headerIcon" alt="icon">
+            <button id="login-signup-btn">ورود / ثبت نام</button>
+            <img src="headerIcon.svg" id="headerIcon" alt="icon">
             <div class="logo">
-                <img src="/frontend/pic/logo.svg" alt="لوگو آکادمی">
+                <a href="mainPage.html"><img src="logo.svg" alt="لوگو آکادمی"></a>
             </div>
             <nav class="nav">
                 <ul class="nav-list">
@@ -23,6 +24,7 @@
             </nav>
         </div>
     </header>
+    <div class="mainpage">
     <main>
         <section class="hero">
             <div class="hero-stats">
@@ -43,7 +45,7 @@
                 <div class="background-purple"></div>
                 <div class="background-gradient"></div>
                 <div class="model-image">
-                    <img src="/frontend/pic/model.svg" alt="مدل">
+                    <img src="model.svg" alt="مدل">
                 </div>
             </div>
             <div class="hero-content">
@@ -52,7 +54,7 @@
                     <a href="#" class="contact-link">ارتباط با ما</a>
                     <button class="hero-button">
                         <span class="button-icon">
-                            <img src="pic/flashIcon.svg" alt="فلش">
+                            <img src="flashIcon.svg" alt="فلش">
                         </span>
                         <span class="button-text">شروع یادگیری برنامه نویسی</span>
                     </button>
@@ -65,25 +67,25 @@
             <div class="features-cards">
                 <div class="card-wallet">
                     <div class="card-icon-wallet">
-                        <img src="/frontend/pic/wallet.svg" alt="آیکون کیف پول">
+                        <img src="wallet.svg" alt="آیکون کیف پول">
                     </div>
                     <p class="card-text">از هر دوره‌ای ناراضی بودی میتونی درخواست بازگشت وجه بدی</p>
                 </div>
                 <div class="card-setting">
                     <div class="card-icon-setting">
-                        <img src="/frontend/pic/setting.svg" alt="آیکون تنظیمات">
+                        <img src="setting.svg" alt="آیکون تنظیمات">
                     </div>
                     <p class="card-text">دوره‌های ما برنامه محور برای کسب مهارت انجام پروژه‌های واقعی هستند</p>
                 </div>
                 <div class="card-profile">
                     <div class="card-icon-profile">
-                        <img src="pic/profile.svg" alt="آیکون پروفایل">
+                        <img src="profile.svg" alt="آیکون پروفایل">
                     </div>
                     <p class="card-text">بهترین اساتید از سر تا سر کشور برای شما انتخاب شده‌اند</p>
                 </div>
                 <div class="card-video-play">
                     <div class="card-icon-video-play">
-                        <img src="/frontend/pic/video.svg" alt="آیکون پخش ویدیو">
+                        <img src="video.svg" alt="آیکون پخش ویدیو">
                     </div>
                     <p class="card-text">بزار خیالتو راحت کنم توی دوره ها به ریز ترین موارد پرداختیم </p>
                 </div>
@@ -101,116 +103,25 @@
                 <button class="tab">بک اند</button>
                 <button class="tab">فرانت اند</button>
             </div>
-            <div class="course-card card-1">
-                <div class="card-image">
-                    <img src="/frontend/pic/course-image.svg" alt="تصویر دوره">
-                </div>
-                <div class="card-content">
-                    <h3 class="course-title">دوره آموزش زبان جاوا</h3>
-                    <p class="course-description">لورم ایپسوم متن ساختگی است که با تولید سادگی نامفهوم </p>
-                    <div class="course-footer">
-                        <div class="author-section">
-                            <button class="like-button"><img src="/frontend/pic/like.svg" alt="لایک"></button>
-                            <span class="author-name">ابوالفضل هادی نژاد</span>
-                            <img src="/frontend/pic/author.svg" alt="آیکون مدرس" class="author-icon">
-                        </div>
-                        <div class="footer-line"></div>
-                        <div class="course-stats">
-                            <span class="course-price">237 هزار تومن</span>
-                            <div class="students-info">
-                                <span class="students-count">225نفر</span>
-                                <img src="/frontend/pic/students.svg" alt="آیکون دانشجو" class="students-icon">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="course-card card-2">
-                <div class="card-image">
-                    <img src="/frontend/pic/course-image.svg" alt="تصویر دوره">
-                </div>
-                <div class="card-content">
-                    <h3 class="course-title">دوره آموزش زبان جاوا</h3>
-                    <p class="course-description">لورم ایپسوم متن ساختگی است که با تولید سادگی نامفهوم </p>
-                    <div class="course-footer">
-                        <div class="author-section">
-                            <button class="like-button"> <img src="/frontend/pic/like.svg" alt="لایک"> </button>
-                            <span class="author-name">مسیح مصطفیی</span>
-                            <img src="/frontend/pic/author.svg" alt="آیکون مدرس" class="author-icon">
-                        </div>
-                        <div class="footer-line"></div>
-                        <div class="course-stats">
-                            <span class="course-price">237 هزار تومن</span>
-                            <div class="students-info">
-                                <span class="students-count">225نفر</span>
-                                <img src="/frontend/pic/students.svg" alt="آیکون دانشجو" class="students-icon">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="course-card card-3">
-                <div class="card-image">
-                    <img src="/frontend/pic/course-image.svg" alt="تصویر دوره">
-                </div>
-                <div class="card-content">
-                    <h3 class="course-title">دوره آموزش زبان جاوا</h3>
-                    <p class="course-description">لورم ایپسوم متن ساختگی است که با تولید سادگی نامفهوم </p>
-                    <div class="course-footer">
-                        <div class="author-section">
-                            <button class="like-button"><img src="/frontend/pic/like.svg" alt="لایک"></button>
-                            <span class="author-name">امیرحسین حمیدی</span>
-                            <img src="/frontend/pic/author.svg" alt="آیکون مدرس" class="author-icon">
-                        </div>
-                        <div class="footer-line"></div>
-                        <div class="course-stats">
-                            <span class="course-price">237 هزار تومن</span>
-                            <div class="students-info">
-                                <span class="students-count">225نفر</span>
-                                <img src="/frontend/pic/students.svg" alt="آیکون دانشجو" class="students-icon">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="course-card card-4">
-                <div class="card-image">
-                    <img src="/frontend/pic/course-image.svg" alt="تصویر دوره">
-                </div>
-                <div class="card-content">
-                    <h3 class="course-title">دوره آموزش زبان جاوا</h3>
-                    <p class="course-description">لورم ایپسوم متن ساختگی است که با تولید سادگی نامفهوم </p>
-                    <div class="course-footer">
-                        <div class="author-section">
-                            <button class="like-button"><img src="/frontend/pic/like.svg" alt="لایک"></button>
-                            <span class="author-name">حسین مفیدی</span>
-                            <img src="/frontend/pic/author.svg" alt="آیکون مدرس" class="author-icon">
-                        </div>
-                        <div class="footer-line"></div>
-                        <div class="course-stats">
-                            <span class="course-price">237 هزار تومن</span>
-                            <div class="students-info">
-                                <span class="students-count">225نفر</span>
-                                <img src="/frontend/pic/students.svg" alt="آیکون دانشجو" class="students-icon">
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            
+            <div id="courses-section">
+                
             </div>
       </section>
     </main>
+    </div>
     <footer class="footer">
         <div class="footer-top">
             <div class="logo-section">
                 <div class="logo-text">
                     <h3>برنامه‌نویسی</h3>
                     <p>barmanenevis.ir</p>
-                </div><img src="/frontend/pic/logo.svg" alt="لوگو سایت"></div>
+                </div><img src="logo.svg" alt="لوگو سایت"></div>
                 <div class="social-icons">
-                    <div class="icon youtube"><img src="/frontend/pic/youtube.svg" alt="یوتیوب"></div>
-                    <div class="icon whatsapp"><img src="/frontend/pic/whatsapp.svg" alt="واتساپ"></div>
-                    <div class="icon facebook"><img src="/frontend/pic/facebook.svg" alt="فیسبوک"></div>
-                    <div class="icon instagram"><img src="/frontend/pic/instagram.svg" alt="اینستاگرام">
+                    <div class="icon youtube"><img src="youtube.svg" alt="یوتیوب"></div>
+                    <div class="icon whatsapp"><img src="whatsapp.svg" alt="واتساپ"></div>
+                    <div class="icon facebook"><img src="facebook.svg" alt="فیسبوک"></div>
+                    <div class="icon instagram"><img src="instagram.svg" alt="اینستاگرام">
                     </div>
                 </div> 
         </div>                   
@@ -242,14 +153,71 @@
                 <ul>
                     <li>
                         <a href="admin@barnamenevis.ir">admin@barnamenevis.ir</a>
-                       <img src="/frontend/pic/email.svg" alt="ایمیل">
+                       <img src="email.svg" alt="ایمیل">  
                     </li>
                     <li>
                         <a href="abolfazl.hadinjad@">abolfazl.hadinjad@</a>
-                        <img src="/frontend/pic/telegram.svg" alt="تلگرام">
+                        <img src="telegram.svg" alt="تلگرام">
                     </li>
                 </ul>
             </div> 
         </div>
+    </footer>
+</div>
+
+
+
+<div id="login-body" class="displaynone">
+    <div class="containerLogin">
+        <div class="logologin">
+            <a href="mainPage.html"><img src="logo.svg" alt="Logo"></a>
+        </div>
+        <h1 class="h1-login">ورود به اکانت</h1>
+        <p class="p-login">خوش برگشتی :)</p>
+        <form class="login-form">
+            <div class="form-grouppp">
+                <input type="text" placeholder="نام کاربری (انگلیسی)" id="login-username" required>
+            </div>
+            <div class="form-grouppp">
+                <input type="password" placeholder="رمز عبور" id="login-password" required>
+            </div>
+            <button class="btn-login" type="submit" >ورود</button>
+        </form>
+        <div class="link">
+            حساب ندارید؟ <a href="signup.html">کلیک کنید</a>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div id="body-signup" class="displaynone">
+    <div class="containerSignup">
+        <div class="logosignup">
+            <a href="mainPage.html"><img src="logo.svg" alt="Logo"></a>
+        </div>
+        <h1>ساخت حساب</h1>
+        <p>عضو خانواده ما شو :)</p>
+        <form class="signup-form">
+            <div class="form-groupp">
+                <input type="text" placeholder="نام کاربری (انگلیسی)" id="signup-username" required>
+            </div>
+            <div class="form-groupp">
+                <input type="password" placeholder="رمز عبور" id="signup-password" required>
+            </div>
+            <div class="form-groupp">
+                <input type="password" placeholder="تکرار رمز عبور" id="signup-password2" required>
+            </div>
+            <button class="btn-submit" type="submit">ثبت‌نام</button>
+        </form>
+        <div class="linkkkkk">
+            حساب دارید؟ <a href="login.html">کلیک کنید</a>
+        </div>
+    </div>
+</div>
+
 </body>
+<script src="mainPage.js">
+</script>
 </html>
