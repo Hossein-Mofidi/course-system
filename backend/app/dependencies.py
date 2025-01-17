@@ -1,5 +1,7 @@
 from typing import Annotated
 
+from sqlalchemy_utils import create_database, database_exists
+from sqlalchemy import URL
 import jwt
 from fastapi import HTTPException, status
 from fastapi.params import Depends
@@ -10,7 +12,16 @@ from sqlmodel import create_engine, SQLModel, Session
 from models import user_model
 from models.user_model import User
 
-DATABASE_URL = "postgresql://course:abolHossein3x2498@localhost/course_management"
+#my test url
+DATABASE_URL = URL.create(
+    drivername="postgresql",
+    username="postgres",
+    password="admin",
+    host="localhost",
+    database="course_management",
+)
+
+# DATABASE_URL = "postgresql://course:abolHossein3x2498@localhost/course_management"
 SECRET_KEY = "19a5a186bfb38e8c61bcda41c73c4e644f74463ed42062534cb9a735e67c5b71"
 ALGORITHM = "HS256"
 ACCESS_TOKEN_EXPIRE_MINUTES = 30
@@ -20,6 +31,9 @@ oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")
 
 
 def create_db_and_tables():
+    #create db if not exists
+    if not database_exists(DATABASE_URL):
+        create_database(DATABASE_URL)
     SQLModel.metadata.create_all(engine)
 
 
