@@ -11,7 +11,7 @@ from schemas.user_schema import CreateUser, Token, BaseUser, UpdateUser
 router = APIRouter()
 
 
-@router.post("/", response_model=BaseUser)
+@router.post("/create", response_model=BaseUser)
 async def create_user(user: Annotated[CreateUser, Form()], session: SessionDep):
     """Create a user with these fields:
        ________________________________
@@ -43,7 +43,7 @@ async def login(
     return await login_with_token(form_data, session)
 
 
-@router.patch("/",
+@router.patch("/update",
               response_model_exclude=["password"],
               response_model_exclude_none=True)
 async def update_user(user: Annotated[UpdateUser, Form()], session: SessionDep) -> UpdateUser:

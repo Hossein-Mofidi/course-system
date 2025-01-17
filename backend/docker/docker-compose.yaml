@@ -1,7 +1,7 @@
 version: '3.8'
 services:
   db:
-    image: postgres:latest
+    image: docker.arvancloud.ir/postgres:latest
     environment:
       POSTGRES_USER: course
       POSTGRES_PASSWORD: abolHossein3x2498
