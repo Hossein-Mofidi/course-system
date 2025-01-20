@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Yekan Bakh FaNum';
+  src: url('./assets/fonts/Yekan_Bakh_Fanum_Extra_Bold.TTF') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Yekan Bakh FaNum';
+  src: url('./assets/fonts/Yekan_Bakh_Fanum_Heavy.TTF') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Modam';
+  src: url('./assets/fonts/Modam-ExtraBold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
