@@ -10,7 +10,7 @@ router = APIRouter()
 def get_all_courses(session: SessionDep) -> Sequence[GetCourse]:
     return course_crud.get_all_courses(session)
 
-@router.get('/id/{course_id}')
+@router.get('/{course_id}')
 def get_course_by_id(course_id: int, session: SessionDep) -> GetCourse:
     return course_crud.get_course_by_id(course_id, session)
 
@@ -18,12 +18,12 @@ def get_course_by_id(course_id: int, session: SessionDep) -> GetCourse:
 def get_course_by_title(course_title: str, session: SessionDep) -> Sequence[GetCourse]:
     return course_crud.get_course_by_title(course_title, session)
 
-@router.delete('/{course_id}')
+@router.delete('/delete/{course_id}')
 def delete_course_by_id(course_id: int, session: SessionDep):
     return course_crud.delete_course_by_id(course_id, session)
 
 
-@router.patch('/{course_id}')
+@router.patch('/update/{course_id}')
 def update_course(course_id: int, new_fields: UpdateCourse, session: SessionDep) -> GetCourse:
     return course_crud.update_course(course_id, new_fields, session)
 
