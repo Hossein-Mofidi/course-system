@@ -1,0 +1,357 @@
+.footer {
+    position: relative;
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.05);
+    padding: 15px 30px;
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+    position: absolute;
+    top: 60px;
+    right: 230px;
+    height: 60px;
+}
+
+.logo-img {
+    width: 64px;
+    height: auto;
+}
+
+.logo-text {
+    text-align: right;
+}
+
+.logo-text h3 {
+    font-size: 24px;
+    font-weight: 600;
+    font-family: 'Modam', sans-serif;
+    margin: 0;
+    color: #000000;
+}
+
+.logo-text p {
+    padding-top: 5px;
+    font-size: 20px;
+    font-weight: 400;
+    margin: 0;
+    color: #555555;
+}
+
+.social-icons {
+    position: relative;
+    width: 500px;
+    height: 100px;
+    margin: 0;
+    top: 45px;
+}
+
+.icon {
+    position: absolute;
+    width: 52px;
+    height: 52px;
+    background: #D5E7B5;
+    border-radius: 5px;
+    top: 0;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.icon img {
+    width: 24px;
+    height: 24px;
+    transition: all 0.3s;
+}
+
+.icon:hover {
+    background: #3A31C2;
+}
+
+.icon:hover img {
+    filter: brightness(0) invert(1);
+}
+
+.youtube {
+    left: 300px;
+}
+
+.whatsapp {
+    left: 233px;
+}
+
+.instagram {
+    left: 99px;
+}
+
+.facebook {
+    left: 166px;
+}
+
+.social-icons img {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.divider {
+    width: 90%;
+    height: 2px;
+    margin: 20px auto;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    text-align: right;
+    direction: rtl;
+    margin-top: 100px;
+    margin-right: 135px;
+}
+
+.column1 {
+    margin-right: 40px;
+    margin-top: 10px;
+    width: 394px;
+    height: 100px;
+}
+
+.column4 {
+    margin-left: 70px;
+}
+
+.footer-column {
+    flex: 1;
+    padding: 10px 40px;
+}
+
+.column4, .column3 ul li {
+    padding: 6px;
+}
+
+.column1 h4, .footer-column h4 {
+    font-family: 'Yekan Bakh FaNum', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 15px;
+    color: #000000;
+    text-align: right;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column ul li {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #000000;
+    opacity: 0.8;
+    text-align: right;
+}
+
+.column4 ul li {
+    justify-content: flex-end;
+    text-align: left;
+}
+
+.footer-column ul li img {
+    width: 24px;
+    height: 24px;
+    margin-left: 10px;
+}
+
+.footer-column p {
+    font-size: 16px;
+    line-height: 20px;
+    color: #555555;
+    opacity: 0.8;
+    text-align: right;
+}
+
+@media (max-width: 780px) {
+    .footer {
+        padding: 20px 15px;
+    }
+
+    .logo-section {
+        flex-direction: row;
+        justify-content: center;
+        position: relative;
+        top: auto;
+        right: auto;
+        gap: 15px;
+        margin-bottom: 20px;
+    }
+
+    .social-icons {
+        display: flex;
+        justify-content: center;
+        left: 110px;
+        gap: 10px;
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    .divider {
+        margin: 20px auto;
+        width: 90%;
+    }
+
+    .footer-bottom {
+        display: grid;
+        grid-template-rows: auto 1fr;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        direction: rtl;
+        text-align: right;
+    }
+
+    .column1 {
+        grid-column: 1 / 4;
+    }
+
+    .footer-column {
+        padding: 10px;
+    }
+
+    .footer-column h4 {
+        font-family: 'Yekan Bakh FaNum', sans-serif;
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 10px;
+        color: #000;
+    }
+
+    .footer-column ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .footer-column ul li {
+        font-size: 14px;
+        margin-bottom: 5px;
+        color: #000;
+        opacity: 0.8;
+    }
+
+    .footer-column ul li img {
+        width: 16px;
+        height: 16px;
+        margin-left: 5px;
+    }
+
+    .footer-column a {
+        text-decoration: none;
+        color: #000;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer {
+        padding: 15px 10px;
+    }
+
+    .logo-section {
+        flex-direction: row;
+        justify-content: center;
+        position: relative;
+        top: auto;
+        right: auto;
+        gap: 15px;
+        margin-bottom: 20px;
+    }
+
+    .social-icons {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        width: 100%;
+        margin: 0 auto 0 -26%;
+    }
+
+    .divider {
+        margin: 15px auto;
+        width: 80%;
+    }
+
+    .footer-bottom {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        direction: rtl;
+        text-align: center;
+        padding-bottom: 20px;
+        margin-right: -8%;
+    }
+
+    .footer-column, .column1 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 7px;
+    }
+
+    .column1 h4 {
+        margin-left: 38px;
+    }
+
+    .footer-column h4, .column1 h4 {
+        font-family: 'Yekan Bakh FaNum', sans-serif;
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 5px;
+        color: #000;
+    }
+
+    .column1 p {
+        font-size: 14px;
+        line-height: 1.8;
+        color: #000;
+        margin: 0;
+        text-align: center;
+    }
+
+    .footer-column ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .footer-column ul li {
+        font-size: 14px;
+        margin-bottom: 8px;
+        color: #000;
+        opacity: 0.9;
+    }
+
+    .footer-column ul li img {
+        width: 16px;
+        height: 16px;
+        margin-left: -33px;
+    }
+
+    .footer-column a {
+        text-decoration: none;
+        color: #000;
+        font-size: 14px;
+        margin-top: 5px;
+    }
+}

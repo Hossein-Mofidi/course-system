@@ -1,0 +1,152 @@
+.login {
+    width: 166px;
+    height: 52px;
+    background: #3A31C2;
+    color: #F9F9F9;
+    font-family: 'Yekan Bakh FaNum', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 28px;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: opacity 0.2s, background-color 0.2s;
+}
+
+.login:hover {
+    opacity: 0.8;
+    background-color: #130d6e;
+}
+
+.logo img {
+    height: 59px;
+    width: auto;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item a {
+    font-family: 'Yekan Bakh FaNum', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: #000;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-item a:hover {
+    color: #3A31C2;
+}
+
+@media (max-width: 768px) {
+    .header {
+        height: 95px;
+        padding: 0 20px;
+    }
+
+    .header-container {
+        max-width: 100%;
+        padding: 0 10px;
+    }
+
+    .logo img {
+        height: 50px;
+    }
+
+    #headerIcon {
+        width: 45px;
+        height: 45px;
+    }
+
+    #headerIcon img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .login {
+        width: 138px;
+        height: 52px;
+        font-size: 16px;
+    }
+
+    .nav {
+        gap: 15px;
+    }
+
+    .nav-item a {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        height: auto;
+        padding: 10px 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header-container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo {
+        margin-top: -90px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .logo img {
+        height: 45px;
+    }
+
+    .login {
+        width: 80px;
+        height: 50px;
+        font-size: 14px;
+        margin-bottom: 15px;
+        align-self: flex-start;
+    }
+
+    #headerIcon {
+        width: 60px;
+        height: 40px;
+        font-size: 14px;
+        align-self: flex-start;
+    }
+
+    .nav {
+        margin-top: -50px;
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .nav-list {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 8px;
+    }
+
+    .nav-item a {
+        font-size: 14px;
+    }
+}

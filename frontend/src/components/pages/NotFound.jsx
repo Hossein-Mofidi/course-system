@@ -1,4 +1,4 @@
-import Header from "./Header.jsx";
+import Header from "../Header.jsx";
 import {Helmet} from "react-helmet";
 
 export default function NotFound() {
