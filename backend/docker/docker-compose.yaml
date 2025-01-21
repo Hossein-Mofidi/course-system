@@ -1,7 +1,7 @@
 version: '3.8'
 services:
   db:
-    image: postgres:latest
+    image: docker.arvancloud.ir/postgres:latest
     environment:
       POSTGRES_USER: course
       POSTGRES_PASSWORD: abolHossein3x2498
@@ -10,15 +10,18 @@ services:
       - "5432:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data
+
   web:
     build:
-      context: .
-    command: uvicorn main:app --host 0.0.0.0 --port 8000 --reload
+      context: ..
+      dockerfile: docker/Dockerfile
+    command: uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
     volumes:
-      - .:/app
+      - ../:/app
     ports:
       - "8000:8000"
     depends_on:
       - db
+
 volumes:
   postgres_data:
