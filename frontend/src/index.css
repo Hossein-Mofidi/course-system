@@ -5,134 +5,134 @@
 
 /********************* Yekan font *********************/
 @font-face {
-  font-family: 'Yekan Bakh FaNum';
-  src: url('./assets/fonts/Yekan_Bakh_Fanum_Fat.TTF') format('truetype');
-  font-weight: 950;
-  font-style: normal;
+    font-family: 'Yekan Bakh FaNum';
+    src: url('./assets/fonts/Yekan_Bakh_Fanum_Fat.TTF') format('truetype');
+    font-weight: 950;
+    font-style: normal;
 }
 
 @font-face {
-  font-family: 'Yekan Bakh FaNum';
-  src: url('./assets/fonts/Yekan_Bakh_Fanum_Heavy.TTF') format('truetype');
-  font-weight: 900;
-  font-style: normal;
+    font-family: 'Yekan Bakh FaNum';
+    src: url('./assets/fonts/Yekan_Bakh_Fanum_Heavy.TTF') format('truetype');
+    font-weight: 900;
+    font-style: normal;
 }
 
 @font-face {
-  font-family: 'Yekan Bakh FaNum';
-  src: url('./assets/fonts/Yekan_Bakh_Fanum_Extra_Bold.TTF') format('truetype');
-  font-weight: 800;
-  font-style: normal;
+    font-family: 'Yekan Bakh FaNum';
+    src: url('./assets/fonts/Yekan_Bakh_Fanum_Extra_Bold.TTF') format('truetype');
+    font-weight: 800;
+    font-style: normal;
 }
 
 @font-face {
-  font-family: 'Yekan Bakh FaNum';
-  src: url('./assets/fonts/Yekan_Bakh_Fanum_Bold.TTF') format('truetype');
-  font-weight: 700;
-  font-style: normal;
+    font-family: 'Yekan Bakh FaNum';
+    src: url('./assets/fonts/Yekan_Bakh_Fanum_Bold.TTF') format('truetype');
+    font-weight: 700;
+    font-style: normal;
 }
 
 @font-face {
-  font-family: 'Yekan Bakh FaNum';
-  src: url('./assets/fonts/Yekan_Bakh_Fanum_Semi_Bold.TTF') format('truetype');
-  font-weight: 600;
-  font-style: normal;
+    font-family: 'Yekan Bakh FaNum';
+    src: url('./assets/fonts/Yekan_Bakh_Fanum_Semi_Bold.TTF') format('truetype');
+    font-weight: 600;
+    font-style: normal;
 }
 
 @font-face {
-  font-family: 'Yekan Bakh FaNum';
-  src: url('./assets/fonts/Yekan_Bakh_Fanum_Medium.TTF') format('truetype');
-  font-weight: 500;
-  font-style: normal;
+    font-family: 'Yekan Bakh FaNum';
+    src: url('./assets/fonts/Yekan_Bakh_Fanum_Medium.TTF') format('truetype');
+    font-weight: 500;
+    font-style: normal;
 }
 
 @font-face {
-  font-family: 'Yekan Bakh FaNum';
-  src: url('./assets/fonts/Yekan_Bakh_Fanum_Regular.TTF') format('truetype');
-  font-weight: 400;
-  font-style: normal;
+    font-family: 'Yekan Bakh FaNum';
+    src: url('./assets/fonts/Yekan_Bakh_Fanum_Regular.TTF') format('truetype');
+    font-weight: 400;
+    font-style: normal;
 }
 
 @font-face {
-  font-family: 'Yekan Bakh FaNum';
-  src: url('./assets/fonts/Yekan_Bakh_Fanum_Light.TTF') format('truetype');
-  font-weight: 300;
-  font-style: normal;
+    font-family: 'Yekan Bakh FaNum';
+    src: url('./assets/fonts/Yekan_Bakh_Fanum_Light.TTF') format('truetype');
+    font-weight: 300;
+    font-style: normal;
 }
 
 @font-face {
-  font-family: 'Yekan Bakh FaNum';
-  src: url('./assets/fonts/Yekan_Bakh_Fanum_Thin.TTF') format('truetype');
-  font-weight: 200;
-  font-style: normal;
+    font-family: 'Yekan Bakh FaNum';
+    src: url('./assets/fonts/Yekan_Bakh_Fanum_Thin.TTF') format('truetype');
+    font-weight: 200;
+    font-style: normal;
 }
 
 @font-face {
-  font-family: 'Yekan Bakh FaNum';
-  src: url('./assets/fonts/Yekan_Bakh_Fanum_Hairline.TTF') format('truetype');
-  font-weight: 100;
-  font-style: normal;
+    font-family: 'Yekan Bakh FaNum';
+    src: url('./assets/fonts/Yekan_Bakh_Fanum_Hairline.TTF') format('truetype');
+    font-weight: 100;
+    font-style: normal;
 }
 
 
 /********************* Modam font *********************/
 @font-face {
-  font-family: 'Modam';
-  src: url('./assets/fonts/Modam-Black.ttf') format('truetype');
-  font-weight: 900;
-  font-style: normal;
+    font-family: 'Modam';
+    src: url('./assets/fonts/Modam-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
 }
 
 @font-face {
-  font-family: 'Modam';
-  src: url('./assets/fonts/Modam-ExtraBold.ttf') format('truetype');
-  font-weight: 800;
-  font-style: normal;
+    font-family: 'Modam';
+    src: url('./assets/fonts/Modam-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
 }
 
 @font-face {
-  font-family: 'Modam';
-  src: url('./assets/fonts/Modam-Bold.ttf') format('truetype');
-  font-weight: 700;
-  font-style: normal;
+    font-family: 'Modam';
+    src: url('./assets/fonts/Modam-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
 }
 
 @font-face {
-  font-family: 'Modam';
-  src: url('./assets/fonts/Modam-SemiBold.ttf') format('truetype');
-  font-weight: 600;
-  font-style: normal;
+    font-family: 'Modam';
+    src: url('./assets/fonts/Modam-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
 }
 
 @font-face {
-  font-family: 'Modam';
-  src: url('./assets/fonts/Modam-Medium.ttf') format('truetype');
-  font-weight: 500;
-  font-style: normal;
+    font-family: 'Modam';
+    src: url('./assets/fonts/Modam-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
 }
 
 @font-face {
-  font-family: 'Modam';
-  src: url('./assets/fonts/Modam-Regular.ttf') format('truetype');
-  font-weight: 400;
-  font-style: normal;
+    font-family: 'Modam';
+    src: url('./assets/fonts/Modam-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
 }
 
 @font-face {
-  font-family: 'Modam';
-  src: url('./assets/fonts/Modam-Light.ttf') format('truetype');
-  font-weight: 300;
-  font-style: normal;
+    font-family: 'Modam';
+    src: url('./assets/fonts/Modam-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
 }
 
 @font-face {
-  font-family: 'Modam';
-  src: url('./assets/fonts/Modam-ExtraBold.ttf') format('truetype');
-  font-weight: 200;
-  font-style: normal;
+    font-family: 'Modam';
+    src: url('./assets/fonts/Modam-ExtraBold.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
 }
 
 body {
-  font-family: 'Yekan Bakh FaNum', serif;
-  background: #F9F9F9;
+    font-family: 'Yekan Bakh FaNum', serif;
+    background: #F9F9F9;
 }

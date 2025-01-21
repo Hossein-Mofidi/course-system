@@ -7,9 +7,9 @@ export default function NotFound() {
             <Helmet>
                 <title>صفحه مورد نظر یافت نشد</title>
             </Helmet>
-            <Header />
-            <img src="/notfound.png" alt="صفحه مورد نظر پیدا نشد" />
-            <h1>صفحه مورد نظر پیدا نشد !</h1>
+            <Header/>
+            <img src="/notfound.png" alt="صفحه مورد نظر پیدا نشد" className="mx-auto"/>
+            <h1 className="font-black mx-auto">صفحه مورد نظر پیدا نشد !</h1>
         </>
     )
 }

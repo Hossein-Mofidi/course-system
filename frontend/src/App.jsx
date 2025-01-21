@@ -6,10 +6,10 @@ import NotFound from "./components/pages/NotFound.jsx";
 function App() {
     return (
         <BrowserRouter>
-          <Routes>
-            <Route path="/" element={<LandingPage />} />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
+            <Routes>
+                <Route path="/" element={<LandingPage/>}/>
+                <Route path="*" element={<NotFound/>}/>
+            </Routes>
         </BrowserRouter>
     );
 }
