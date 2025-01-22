@@ -7,7 +7,7 @@ export default function Header() {
     const navbarItems = [
         {item: 'درباره ما', href: '#top'},
         {item: 'دوره های آموزشی', href: ''},
-        {item: 'صفحه اصلی', href: LandingPage},
+        {item: 'صفحه اصلی', href: ''},
     ]
 
     let navigate = useNavigate()

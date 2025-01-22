@@ -2,6 +2,8 @@ import {Helmet} from "react-helmet";
 import {useState} from "react";
 import eyeslash from "../../assets/icons/eye-slash.svg"
 import Alert from "@mui/material/Alert";
+import {useMutation} from "@tanstack/react-query";
+import {Link} from "react-router-dom";
 
 
 export default function Login() {
@@ -12,19 +14,16 @@ export default function Login() {
             </Helmet>
             <div className="bg-gray-100 flex items-center justify-center min-h-screen">
                 <div className="bg-white shadow-2xl rounded-[1.25rem] p-8 w-full max-w-sm sm:max-w-md lg:max-w-lg">
-                    <LoginFooter/>
-                    <LoginForm/>
-
-                    <p className="text-center text-sm sm:text-base text-gray-600 mt-6">
-                        حساب ندارید؟ <a href="#" className="text-green-600 hover:underline">کلیک کنید</a>
-                    </p>
+                    <LoginHeader />
+                    <LoginForm />
+                    <LoginFooter />
                 </div>
             </div>
         </>
     )
 }
 
-function LoginFooter() {
+function LoginHeader() {
     return (
         <div className="flex flex-col items-center mb-8">
             <img src="/logo.svg" alt="لوگو" className="w-16 h-auto mb-4"/>
@@ -34,45 +33,59 @@ function LoginFooter() {
     )
 }
 
+function LoginFooter() {
+    return (
+        <p className="text-center text-sm sm:text-base text-gray-600 mt-6">
+            حساب ندارید؟ <Link to="/signup" className="text-green-600 hover:underline">کلیک کنید</Link>
+        </p>
+    )
+}
+
 function LoginForm() {
     const [username, setUsername] = useState("")
     const [password, setPassword] = useState("")
     const [error, setError] = useState("")
+    const loginUrl = "http://localhost:8000/api/v1/users/token"
+
+    const loginMutation = useMutation({
+        mutationFn: async (credentials) => {
+            const formData = new URLSearchParams()
+            formData.append("grant_type", "password")
+            formData.append("username", credentials.username)
+            formData.append("password", credentials.password)
+
+            const response = await fetch(loginUrl, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/x-www-form-urlencoded",
+                },
+                body: formData,
+            });
+
+            if (!response.ok) {
+                console.log(response)
+                throw new Error("ورود ناموفق بود");
+            }
+
+            return response.json()
+        },
+        onSuccess: (data) => {
+            localStorage.setItem("token", data.access_token)
+        },
+        onError: (error) => {
+            setError(error.message)
+        },
+    })
 
     function handleSubmit(e) {
         e.preventDefault()
 
         if (!username || !password) {
             setError("لطفا نام کاربری و رمز عبور خود را وارد کنید")
-            // return
+            return
         }
 
-        // const loginMutation = useMutation({
-        //     mutationFn: async (credentials) => {
-        //         const response = await fetch("https://example.com/api/login", {
-        //             method: "POST",
-        //             headers: {
-        //                 "Content-Type": "application/json",
-        //             },
-        //             body: JSON.stringify(credentials),
-        //         });
-        //
-        //         if (!response.ok) {
-        //             throw new Error("ورود ناموفق بود");
-        //         }
-        //
-        //         return response.json(); // دریافت توکن از سرور
-        //     },
-        //     onSuccess: (data) => {
-        //         // ذخیره توکن در localStorage یا state
-        //         localStorage.setItem("token", data.token);
-        //         console.log("توکن دریافت شد:", data.token);
-        //         // هدایت کاربر به صفحه‌ی بعدی
-        //         window.location.href = "/dashboard";
-        //     },
-        //     onError: (error) => {
-        //         setError(error.message); // نمایش خطا به کاربر
-        //     },
+        loginMutation.mutate({username, password})
     }
 
     return (
