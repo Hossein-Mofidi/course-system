@@ -1,12 +1,14 @@
 import Header from "../Header.jsx";
 import './LandingPage.css'
 import heroModel from '../../assets/icons/model.svg'
+import Footer from "../Footer.jsx";
 
 export default function LandingPage() {
     return (
         <>
-            <Header/>
-            <Main/>
+            <Header />
+            <Main />
+            <Footer />
         </>
     )
 }
@@ -94,6 +96,7 @@ function HeroStats() {
             {heroStats.map((heroStat) => (
                     // eslint-disable-next-line react/jsx-key
                     <HeroStat
+                        key={heroStat.value}
                         classContent={heroStat.class}
                         value={heroStat.value}
                         content={heroStat.content}/>

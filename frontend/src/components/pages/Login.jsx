@@ -1,9 +1,9 @@
 import {Helmet} from "react-helmet";
 import {useState} from "react";
-import eyeslash from "../../assets/icons/eye-slash.svg"
 import Alert from "@mui/material/Alert";
 import {useMutation} from "@tanstack/react-query";
-import {Link} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
+import {FaEye, FaEyeSlash} from "react-icons/fa";
 
 
 export default function Login() {
@@ -45,6 +45,11 @@ function LoginForm() {
     const [username, setUsername] = useState("")
     const [password, setPassword] = useState("")
     const [error, setError] = useState("")
+    const [info, setInfo] = useState("")
+    const [showPassword, setShowPassword] = useState(false)
+    const [isHovered, setIsHovered] = useState(false);
+
+    const navigate = useNavigate()
     const loginUrl = "http://localhost:8000/api/v1/users/token"
 
     const loginMutation = useMutation({
@@ -63,7 +68,6 @@ function LoginForm() {
             });
 
             if (!response.ok) {
-                console.log(response)
                 throw new Error("ورود ناموفق بود");
             }
 
@@ -71,6 +75,9 @@ function LoginForm() {
         },
         onSuccess: (data) => {
             localStorage.setItem("token", data.access_token)
+            setError("")
+            setInfo("با موفقیت وارد شدید")
+            navigate("/")
         },
         onError: (error) => {
             setError(error.message)
@@ -96,11 +103,17 @@ function LoginForm() {
                 </Alert>
             )}
 
+            {info && (
+                <Alert severity="info" variant="filled" className="mb-4">
+                    {info}
+                </Alert>
+            )}
+
             <form onSubmit={handleSubmit}>
                 <div className="mb-6">
                     <input
                         type="text"
-                        placeholder="نام کاربری (ایمیل)"
+                        placeholder="نام کاربری"
                         value={username}
                         onChange={(e) => setUsername(e.target.value)}
                         className="w-full bg-[#F1F1F1] px-4 py-3 text-sm sm:text-base border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
@@ -108,15 +121,30 @@ function LoginForm() {
                 </div>
                 <div className="mb-6 relative">
                     <input
-                        type="password"
+                        type={showPassword ? "text" : "password"}
                         placeholder="رمز عبور"
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
                         className="w-full bg-[#F1F1F1] px-4 py-3 text-sm sm:text-base border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                     />
-                    <button type="button" className="absolute inset-y-0 left-3 flex items-center">
-                        <img src={eyeslash} alt="نمایش رمز"
-                             className="w-5 h-5 text-gray-400 hover:text-gray-600"/>
+                    <button
+                        type="button"
+                        className="absolute inset-y-0 left-3 flex items-center"
+                        onClick={() => setShowPassword(!showPassword)}
+                        onMouseEnter={() => setIsHovered(true)}
+                        onMouseLeave={() => setIsHovered(false)}
+                    >
+                        {isHovered ? (
+                            showPassword ? (
+                                <FaEyeSlash size={24} className="text-blue-500"/>
+                            ) : (
+                                <FaEye size={24} className="text-blue-500"/>
+                            )
+                        ) : showPassword ? (
+                            <FaEyeSlash size={24} className="text-gray-500"/>
+                        ) : (
+                            <FaEye size={24} className="text-gray-500"/>
+                        )}
                     </button>
                 </div>
                 <button

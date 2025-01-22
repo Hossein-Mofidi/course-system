@@ -1,68 +1,248 @@
-main {
-    display: block;
-    margin: 0;
-    padding-top: 95px;
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 95px;
+    background: #FFFFFF;
+    box-shadow: 0px 11px 200px rgba(0, 0, 0, 0.1);
+    border-radius: 0 0 20px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    box-sizing: border-box;
 }
 
+.header-container {
+    width: 100%;
+    max-width: 1440px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+.login {
+    width: 166px;
+    height: 52px;
+    background: #3A31C2;
+    color: #F9F9F9;
+    font-family: 'Yekan Bakh FaNum', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 28px;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: opacity 0.2s, background-color 0.2s;
+}
+.login:hover {
+    opacity: 0.8;
+    background-color: #130d6e;
+}
+
+.logo img {
+    height: 59px;
+    width: auto;
+}
+#headerIcon {
+    width: 52px;
+    height: 52px;
+    background: #D5E7B5;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+#headerIcon:hover {
+    opacity: 0.7;
+}
+#headerIcon img {
+    width: 24px;
+    height: 24px;
+}
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+.nav-item a {
+    font-family: 'Yekan Bakh FaNum', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: #000;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+.nav-item a:hover {
+    color: #3A31C2;
+}
+@media (max-width: 768px) {
+    .header {
+        height: 95px;
+        padding: 0 20px;
+    }
+    .header-container {
+        max-width: 100%;
+        padding: 0 10px;
+    }
+    .logo img {
+        height: 50px;
+    }
+    #headerIcon {
+        width: 45px;
+        height: 45px;
+    }
+    #headerIcon img {
+        width: 20px;
+        height: 20px;
+    }
+    .login {
+        width: 138.5px;
+        height: 52px;
+        font-size: 16px;
+    }
+    .nav {
+        gap: 15px;
+    }
+    .nav-item a {
+        font-size: 16px;
+    }
+}
+@media (max-width: 480px) {
+    .header {
+        height: auto;
+        padding: 10px 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .header-container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .logo {
+        margin-top: -90px;
+        display: flex;
+        justify-content: center;
+    }
+    .logo img {
+        height: 45px;
+    }
+    .login {
+        width: 80px;
+        height: 50px;
+        font-size: 14px;
+        margin-bottom: 15px;
+        align-self: flex-start;
+    }
+    #headerIcon {
+        width: 60px;
+        height: 40px;
+        font-size: 14px;
+        align-self: flex-start;
+    }
+    .nav {
+        margin-top: -50px;
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+    }
+    .nav-list {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 8px;
+    }
+    .nav-item a {
+        font-size: 14px;
+    }
+}
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1440px;
+    top: 161px;
+    margin: 0 auto;
+    position: relative;
+    padding: 20px 40px;
+    box-sizing: border-box;
+}
 .hero-stats {
     flex-direction: column;
-    position: absolute;
     width: 126px;
     height: auto;
-    left: 120px;
-    top: 225px;
     align-items: center;
     opacity: 100%;
     border-radius: 0;
+    margin: 0 20px;
 }
-
 .stat-item {
     align-items: center;
     padding: 5px;
 }
-
 .stat-value {
     padding-left: 20px;
-    padding-top: 0px;
-    font-family: 'Yekan Bakh FaNum',;
+    padding-top: 0;
+    font-family: 'Yekan Bakh FaNum', sans-serif;
     font-style: normal;
     font-weight: 900;
     font-size: 36px;
     line-height: 56px;
 }
-
 .stat-label-m {
     margin-left: -20px;
 }
-
 .stat-label-a {
     margin-left: -35px;
 }
-
 .stat-label-h {
     margin-left: -4px;
 }
-
-.stat-label-a, .stat-label-h,
-.stat-label-m {
+.stat-label-a, .stat-label-h, .stat-label-m {
     margin-top: -50px;
     padding-left: 25px;
-    font-family: 'Yekan Bakh FaNum';
+    font-family: 'Yekan Bakh FaNum', sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 18px;
     line-height: 28px;
     color: #000000;
 }
-
 .hero-model {
     position: absolute;
     width: 468px;
     height: 502px;
     left: 318px;
-    top: 161px;
+    top: 10px;
 }
-
 .background-purple {
     position: absolute;
     width: 455px;
@@ -73,7 +253,6 @@ main {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 65px;
 }
-
 .background-gradient {
     position: absolute;
     width: 455px;
@@ -83,7 +262,6 @@ main {
     background: linear-gradient(142.29deg, #E5F2CD -24.32%, #D5E7B5 91.57%);
     border-radius: 65px;
 }
-
 .model-image {
     position: absolute;
     width: 393px;
@@ -91,7 +269,6 @@ main {
     left: 48px;
     top: 0px;
 }
-
 .model-image img {
     width: 100%;
     height: auto;
@@ -99,38 +276,30 @@ main {
 }
 
 .hero-content {
-    position: absolute;
-    width: 500px;
-    height: auto;
-    left: 838px;
-    top: 304px;
-    text-align: right;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    align-items: flex-end;
+    text-align: right;
+    max-width: 500px;
+    margin-left: 20px;
 }
-
 .hero-title {
     font-family: 'Modam', sans-serif;
-    font-style: normal;
     font-weight: 700;
     font-size: 53px;
     line-height: 76px;
     color: #000000;
     margin: 0;
 }
-
 .hero-actions {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    gap: 40px;
+    gap: 20px;
     margin-top: 20px;
 }
-
 .contact-link {
     font-family: 'Yekan Bakh FaNum', sans-serif;
-    font-style: normal;
     font-weight: 500;
     font-size: 24px;
     line-height: 28px;
@@ -138,11 +307,9 @@ main {
     color: #3A31C2;
     transition: color 0.3s;
 }
-
 .contact-link:hover {
     color: #130d6e;
 }
-
 .hero-button {
     display: flex;
     align-items: center;
@@ -156,60 +323,276 @@ main {
     cursor: pointer;
     transition: opacity 0.2s;
 }
-
 .hero-button:hover {
     opacity: 0.8;
     background-color: #161062;
     box-shadow: #2d0410;
 }
-
 .button-text {
     font-family: 'Yekan Bakh FaNum', sans-serif;
-    font-style: normal;
     font-weight: 500;
     font-size: 18px;
     line-height: 28px;
     color: #F9F9F9;
 }
-
 .button-icon img {
     width: 50px;
     height: 25px;
 }
+@media (max-width: 1024px) {
+    .hero {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 5px 38px;
+        gap: 18px;
+    }
+    .hero-stats {
+        width: 30%;
+        align-items: center;
+        gap: 10px;
+    }
+    .hero-model {
+        width: 60%;
+        height: auto;
+        margin: 0;
+        left:6%;
+    }
+    .background-purple {
+        position: absolute;
+        top: 12%;
+        left: 27%;
+        width: 56%;
+        height: 75%;
+        background: #3A31C2;
+        border-radius: 40px;
+        z-index: 0;
+    }
+    .background-gradient {
+        position: absolute;
+        top: 14%;
+        left: 31%;
+        width: 56%;
+        height: 75%;
+        background: linear-gradient(142.29deg, #E5F2CD -24.32%, #D5E7B5 91.57%);
+        border-radius: 40px;
+        z-index: 1;
+    }
+    .model-image {
+        position: relative;
+        width: 60%;
+        top: 0;
+        left:30%;
+        z-index: 2;
+    }
+    .hero-content {
+        margin-top:30%;
+        width: 41%;
+        text-align: right;
+    }
+    .contact-link:hover {
+        color: #130d6e;
+    }
+    .hero-title {
+        font-size: 38px;
+        line-height: 38px;
+    }
+    .hero-actions {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        gap: 10px;
+    }
+    .hero-button {
+        width: auto;
+    }
+}
+@media (max-width: 768px) {
+    .hero {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 7px 30px;
+        gap: 15px;
+    }
+    .hero-stats {
+        width: 23%;
+        align-items: center;
+        gap: 5px;
+    }
+    .hero-model {
+        width: 56%;
+        height: auto;
+        margin: 0;
+        left:8%;
+    }
+    .background-purple {
+        position: absolute;
+        top: 20%;
+        left: 40%;
+        width: 48%;
+        height: 52%;
+        background: #3A31C2;
+        border-radius: 40px;
+        z-index: 0;
+    }
+    .background-gradient {
+        position: absolute;
+        top: 22%;
+        left: 44%;
+        width: 48%;
+        height: 52%;
+        background: linear-gradient(142.29deg, #E5F2CD -24.32%, #D5E7B5 91.57%);
+        border-radius: 40px;
+        z-index: 1;
+    }
+    .model-image {
+        position: relative;
+        width: 60%;
+        margin-top: 12%;
+        margin-left: 8%;
+        z-index: 2;
+    }
+    .hero-content {
+        margin-top:24%;
+        width: 40%;
+        text-align: right;
+    }
+    .contact-link:hover {
+        color: #130d6e;
+    }
+    .hero-title {
+        font-size: 28px;
+        line-height: 38px;
+    }
+    .hero-actions {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        gap: 10px;
+    }
 
+    .hero-button {
+        width: auto;
+    }
+}
+@media (max-width: 480px) {
+    .hero {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+        gap: 10px;
+    }
+    .hero-model {
+        position: relative;
+        width: 60%;
+        height: auto;
+        margin-left: -400px;
+    }
+    .background-purple {
+        position: absolute;
+        top: 2%;
+        left: 31%;
+        width: 100%;
+        height: 100%;
+        background: #3A31C2;
+        border-radius: 40px;
+        z-index: 0;
+    }
+    .background-gradient {
+        position: absolute;
+        top: 7%;
+        left: 38%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(142.29deg, #E5F2CD -24.32%, #D5E7B5 91.57%);
+        border-radius: 40px;
+        z-index: 1;
+    }
+    .model-image {
+        position: relative;
+        width: 110%;
+        top: -75px;
+        margin-left: 7px;
+        height: auto;
+        z-index: 2;
+    }
+    .hero-stats {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 90%;
+        margin-top: -380px;
+        gap: 10px;
+        order: 3;
+    }
+    .stat-item {
+        align-self: flex-end;
+    }
+    .hero-content {
+        width: 90%;
+        margin-top: 20px;
+        text-align: center;
+        order: 4;
+    }
+    .contact-link:hover {
+        color: #130d6e;
+    }
+    .hero-title {
+        font-size: 20px;
+        line-height: 28px;
+    }
+    .hero-actions {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .hero-button {
+        width: 100%;
+    }
+}
+.features {
+    position: relative;
+    padding: 50px 20px;
+    margin-top: 200px;
+}
 .features-subtitle {
     position: absolute;
-    width: 116px;
-    height: 37px;
-    left: 662px;
-    top: 794px;
+    width: 100%;
+    text-align: center;
     font-family: 'Yekan Bakh FaNum', sans-serif;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 400px;
     font-size: 24px;
     line-height: 37px;
-    text-align: center;
     color: #000000;
+    top: 50px;
 }
-
 .features-title {
     position: absolute;
-    width: 471px;
-    height: 51px;
-    left: 484px;
-    top: 832px;
+    width: 100%;
+    text-align: center;
     font-family: 'Modam', sans-serif;
     font-style: normal;
     font-weight: 600;
     font-size: 36px;
     line-height: 51px;
-    text-align: center;
     color: #000000;
+    top: 100px;
 }
-
+.features-cards {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 150px; /* فاصله از عنوان */
+    gap: 20px;
+    flex-wrap: wrap; /* چیدمان چندخطی */
+}
 .card-wallet, .card-setting,
-.card-profile, .card-video-play {
-    position: absolute;
+.card-profile, .card-video-play{
+    position: relative;
     width: 270px;
     height: 259px;
     border-radius: 25px;
@@ -218,24 +601,19 @@ main {
     box-shadow: 0px 10px 200px rgba(0, 0, 0, 0.1);
     cursor: pointer;
 }
-
-.card-wallet, .card-video-play {
-    top: 914px;
+.card-wallet, .card-video-play{
+    top: 14px;
 }
-
-.card-setting, .card-profile {
-    top: 984px;
+.card-setting, .card-profile{
+    top: 84px;
 }
-
 .card-wallet:hover, .card-setting:hover,
-.card-profile:hover, .card-video-play:hover {
+.card-profile:hover, .card-video-play:hover{
     background: #E5F2CD;
     box-shadow: 0px 15px 50px rgba(58, 49, 194, 0.4);
     transform: translateY(-10px);
 }
-
-.card-icon-wallet, .card-icon-setting,
-.card-icon-profile, .card-icon-video-play {
+.card-icon-wallet, .card-icon-setting, .card-icon-profile, .card-icon-video-play {
     position: absolute;
     width: 76px;
     height: 76px;
@@ -248,63 +626,39 @@ main {
     align-items: center;
     transition: all 0.3s;
 }
-
 .card-icon-wallet img, .card-icon-setting img,
-.card-icon-profile img, .card-video-play img {
+.card-icon-profile img, .card-video-play img{
     width: 36px;
     height: 36px;
     transition: opacity 0.3s;
 }
-
 .card-wallet:hover .card-icon-wallet img,
 .card-setting:hover .card-icon-setting img,
 .card-profile:hover .card-icon-profile img,
 .card-video-play:hover .card-icon-video-play img {
     opacity: 0;
 }
-
 .card-wallet:hover .card-icon-wallet,
 .card-setting:hover .card-icon-setting,
 .card-profile:hover .card-icon-profile,
-.card-video-play:hover .card-icon-video-play {
+.card-video-play:hover .card-icon-video-play{
     background-size: cover;
     background-position: center;
     transform: rotate(360deg);
 }
-
-.card-wallet {
-    left: 133px;
-}
-
-.card-wallet:hover .card-icon-wallet {
+.card-wallet:hover .card-icon-wallet{
     background-image: url('/pic/wallet.png');
 }
-
-.card-setting {
-    left: 434px;
-}
-
-.card-setting:hover .card-icon-setting {
+.card-setting:hover .card-icon-setting{
     background-image: url('/pic/settings.png');
 }
-
-.card-profile {
-    left: 735px;
-}
-
-.card-profile:hover .card-icon-profile {
+.card-profile:hover .card-icon-profile{
     background-image: url('/pic/profile.png');
 }
-
-.card-video-play {
-    left: 1036px;
-}
-
-.card-video-play:hover .card-icon-video-play {
+.card-video-play:hover .card-icon-video-play{
     background-image: url('/pic/videoplayer.png');
 }
-
-.card-text {
+.card-text{
     position: absolute;
     width: 218px;
     height: auto;
@@ -318,210 +672,191 @@ main {
     text-align: right;
     color: #000000;
 }
-
-.courses-title {
-    position: absolute;
-    width: 253px;
-    height: 51px;
-    left: 1063px;
-    top: 1440px;
-    font-family: 'Modam', sans-serif;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 36px;
-    line-height: 51px;
-    text-align: right;
-    color: #000000;
+@media (max-width: 1024px) {
+    .features {
+        margin-top: 20%;
+        gap: 17px;
+    }
+    .card-wallet, .card-setting,
+    .card-profile, .card-video-play{
+    width: 200px;
+    height: 180px;
 }
-
-.line-1 {
-    position: absolute;
-    width: 329px;
-    height: 0px;
-    left: 711px;
-    top: 1472px;
-    border-top: 3px solid #3A31C2;
+    .card-wallet, .card-video-play{
+        top: 14px;
+    }
+    .card-setting, .card-profile{
+        top: 75px;
+    }
+  .card-icon-wallet, .card-icon-setting,
+  .card-icon-profile, .card-icon-video-play {
+        width: 65px;
+        height: 65px;
+        left: 120px;
+        top: 22px;
+    }
+    .card-text{
+            width: 200px;
+            height: auto;
+            left: 0;
+            top: 80px;
+            font-size: 16px;
+    }
 }
-
-.line-1-diamond {
-    position: absolute;
-    width: 10px;
-    height: 10px;
-    background-color: #3A31C2;
-    left: 700px;
-    top: 1468px;
-    transform: rotate(45deg);
+@media (max-width: 768px) {
+    .features {
+        margin-top: 100px;
+    }
+    .features-cards {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+    .card-wallet, .card-setting,
+    .card-profile, .card-video-play{
+        width: 230px;
+        height: 219px;
+    }
+    .card-wallet, .card-setting,
+    .card-profile, .card-video-play{
+        top: 0px;
+    }
+ .card-icon-wallet, .card-icon-setting,
+  .card-icon-profile, .card-icon-video-play {
+        width: 55px;
+        height: 55px;
+        left: 160px;
+        top: 22px;
+    }
+    .card-text {
+    width: 227px;
+    height: auto;
+    left: 2px;
+    top: 115px;
+    font-size: 16px;
+    }
 }
-
-.courses-title {
-    position: absolute;
-    width: 253px;
-    height: 51px;
-    left: 1063px;
-    top: 1440px;
-    font-family: 'Modam', sans-serif;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 36px;
-    line-height: 51px;
-    text-align: right;
-    color: #000000;
+@media (max-width: 480px) {
+    .features {
+        margin-top: 110px;
+    }
+    .features-cards {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-top: 200px;
+        gap: 15px;
+    }
+    .card-wallet, .card-setting,
+    .card-profile, .card-video-play{
+        width: 195px;
+        height: 175px;
+        left: 100px;
+    }
+    .card-icon-wallet, .card-icon-setting,
+     .card-icon-profile, .card-icon-video-play {
+        width: 36px;
+        height: 36px;
+        left: 150px;
+        top: 15px;
+    }
+    .card-text {
+        width: 193px;
+        height: auto;
+        font-size: 12px;
+        top: 100px;
+        left: 0;
+    }
 }
-
-.line-1 {
-    position: absolute;
-    width: 329px;
-    height: 0px;
-    left: 711px;
-    top: 1472px;
-    border-top: 3px solid #3A31C2;
-}
-
-.line-1-diamond {
-    position: absolute;
-    width: 10px;
-    height: 10px;
-    background-color: #3A31C2;
-    left: 700px;
-    top: 1468px;
-    transform: rotate(45deg);
-}
-
-.course-tabs {
-    position: absolute;
-    top: 1445px;
-    display: flex;
-    gap: 20px;
-    left: 95px;
-}
-
-.tab {
-    width: 126px;
-    height: 53px;
-    background: #3A31C2;
-    border-radius: 10px;
-    border: none;
-    font-family: 'Yekan Bakh FaNum', sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 28px;
+.courses {
     text-align: center;
-    color: #FFFFFF;
+    padding: 50px 20px;
+}
+.courses-title {
+    text-align: center;
+    font-family: 'Modam', sans-serif;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 51px;
+    color: #000000;
+    margin-bottom: 20px;
+}
+.line-container {
     display: flex;
-    align-items: center;
     justify-content: center;
-    cursor: pointer;
+    align-items: center;
+    margin-bottom: 40px;
 }
-
-.tab:hover {
-    background: #D3E2B5;
-    color: #000000;
+.line-1 {
+    width: 329px;
+    height: 2px;
+    background-color: #3A31C2;
 }
-
-.active-tab {
-    background: #D3E2B5;
-    color: #000000;
+.course-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    justify-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
 }
-
 .course-card {
-    position: absolute;
-    width: 280.9px;
-    height: 423px;
+    width: 100%;
+    max-width: 280px;
+    height: auto;
     background: #F9F9F9;
-    box-shadow: 0px 11px 198.9px rgba(0, 0, 0, 0.1);
     border-radius: 20px;
-    overflow: hidden;
-    transition: all 0.3s;
     box-shadow: 0px 10px 200px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s;
     cursor: pointer;
 }
-
 .course-card:hover {
     background: #E5F2CD;
     box-shadow: 0px 15px 50px rgba(58, 49, 194, 0.4);
     transform: translateY(-10px);
 }
-
-.card-1 {
-    left: 1033px;
-    top: 1568px;
-}
-
-.card-2 {
-    left: 734px;
-    top: 1568px;
-}
-
-.card-3 {
-    left: 434px;
-    top: 1568px;
-}
-
-.card-4 {
-    left: 133px;
-    top: 1568px;
-}
-
 .card-image {
-    position: absolute;
-    width: 255.36px;
-    height: 178px;
+    width: 100%;
+    height: 180px;
     background: #3A31C2;
-    border-radius: 20px;
-    top: 18px;
-    left: 50%;
-    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
 }
-
 .card-image img {
     width: 70px;
-    height: 63.73px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    height: 70px;
 }
-
+.card-content {
+    padding: 20px;
+}
 .course-title {
-    position: absolute;
-    width: 100%;
-    top: 205px;
-    text-align: center;
     font-family: 'Yekan Bakh FaNum';
-    font-style: normal;
     font-weight: 700;
-    font-size: 18.6px;
+    font-size: 18px;
     line-height: 28px;
     color: #0E1E36;
+    margin-bottom: 10px;
+    text-align: center;
 }
-
 .course-description {
-    position: absolute;
-    width: 247px;
-    top: 245px;
-    left: 50%;
-    transform: translateX(-50%);
     font-family: 'Yekan Bakh FaNum';
-    font-style: normal;
     font-weight: 400;
     font-size: 16px;
-    line-height: 25px;
-    text-align: right;
+    line-height: 24px;
     color: #000000;
     opacity: 0.8;
+    margin-bottom: 20px;
+    text-align: right;
 }
-
 .course-footer {
-    position: absolute;
-    width: 90%;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
     display: flex;
     flex-direction: column;
+    gap: 10px;
 }
-
 .author-section {
     display: flex;
     justify-content: space-between;
@@ -529,73 +864,372 @@ main {
     width: 100%;
     margin-top: 10px;
 }
-
 .author-icon {
-    width: 23.57px;
-    height: 24px;
-    opacity: 0.8;
+    width: 25px;
+    height: 25px;
 }
-
 .author-name {
     margin-left: auto;
-    font-family: 'Yekan Bakh FaNum', sans-serif;
+    font-family: 'Yekan Bakh FaNum';
     font-weight: 400;
-    font-size: 16px;
+    font-size: 14px;
     color: #0E1E36;
 }
-
 .like-button {
     background: none;
     border: none;
     cursor: pointer;
 }
-
 .like-button img {
     width: 23.57px;
     height: 24px;
     transition: 0.3s;
-    cursor: pointer;
 }
-
 .footer-line {
     width: 100%;
     height: 1px;
     background: rgba(0, 0, 0, 0.3);
 }
-
 .course-stats {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-
 .students-info {
     display: flex;
     align-items: center;
     gap: 5px;
 }
-
-.students-icon {
-    width: 23.57px;
-    height: 24px;
-    opacity: 0.8;
-}
-
 .students-count {
     font-family: 'Yekan Bakh FaNum';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 14px;
     color: #0E1E36;
-    opacity: 0.8;
 }
-
 .course-price {
     font-family: 'Yekan Bakh FaNum';
-    font-style: normal;
     font-weight: 500;
     font-size: 16px;
-    line-height: 24px;
     color: #4F986C;
+}
+@media (max-width: 1024px) {
+    .course-cards {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media (max-width: 768px) {
+    .course-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 480px) {
+    .course-cards {
+        grid-template-columns: 1fr;
+    }
+}
+.footer {
+    position: relative;
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.05);
+    padding: 15px 30px;
+}
+.logo-section {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+    position: absolute;
+    top: 60px;
+    right: 230px;
+    height: 60px;
+}
+.logo-img {
+    width: 64px;
+    height: auto;
+}
+.logo-text {
+    text-align: right;
+}
+.logo-text h3 {
+    font-size: 24px;
+    font-weight: 600;
+    font-family: 'Modam', sans-serif;
+    margin: 0;
+    color: #000000;
+}
+.logo-text p {
+    padding-top: 5px;
+    font-size: 20px;
+    font-weight: 400;
+    margin: 0;
+    color: #555555;
+}
+.social-icons {
+    position: relative;
+    width: 500px;
+    height: 100px;
+    margin: 0;
+    top: 45px;
+}
+.icon{
+    position: absolute;
+    width: 52px;
+    height: 52px;
+    background: #D5E7B5;
+    border-radius: 5px;
+    top: 0px;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+.icon img {
+    width: 24px;
+    height: 24px;
+    transition: all 0.3s;
+  }
+  .icon:hover{
+  background: #3A31C2;
+  }
+  .icon:hover img {
+    filter: brightness(0) invert(1);
+  }
+.youtube {
+    left: 300px;
+}
+.whatsapp{
+    left: 233px;
+}
+.instagram{
+    left: 99px;
+}
+.facebook {
+    left: 166px;
+}
+.social-icons img {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.divider {
+    width: 90%;
+    height: 2px;
+    margin: 20px auto;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    gap:20px;
+    text-align: right;
+    direction: rtl;
+    margin-top: 100px;
+    margin-right: 135px;
+}
+.column1{
+ margin-right: 40px;
+ margin-top: 10px;
+ width: 394px;
+ height: 100px;
+}
+.column4{
+    margin-left: 70px;
+ }
+.footer-column {
+    flex: 1;
+    padding: 10px 40px;
+}
+.column4,.column3 ul li{
+padding: 6px;
+}
+.column1 h4,.footer-column h4 {
+    font-family: 'Yekan Bakh FaNum';
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 15px;
+    color: #000000;
+    text-align: right;
+}
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.footer-column ul li {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #000000;
+    opacity: 0.8;
+    text-align: right;
+}
+.column4 ul li{
+    justify-content:flex-end;
+    text-align: left;
+}
+.footer-column ul li img {
+    width: 24px;
+    height: 24px;
+    margin-left: 10px;
+}
+.footer-column p {
+    font-size: 16px;
+    line-height: 20px;
+    color: #555555;
+    opacity: 0.8;
+    text-align: right;
+}
+@media (max-width: 780px) {
+    .footer {
+        padding: 20px 15px;
+    }
+    .logo-section {
+        flex-direction: row;
+        justify-content: center;
+        position: relative;
+        top: auto;
+        right: auto;
+        gap: 15px;
+        margin-bottom: 20px;
+    }
+    .social-icons {
+        display: flex;
+        justify-content: center;
+        left:110px;
+        gap: 10px;
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    .divider {
+        margin: 20px auto;
+        width: 90%;
+    }
+    .footer-bottom {
+        display: grid;
+        grid-template-rows: auto 1fr;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        direction: rtl;
+        text-align: right;
+    }
+    .column1 {
+        grid-column: 1 / 4;
+    }
+    .footer-column {
+        padding: 10px;
+    }
+    .footer-column h4 {
+        font-family: 'Yekan Bakh FaNum', sans-serif;
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 10px;
+        color: #000;
+    }
+    .footer-column ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    .footer-column ul li {
+        font-size: 14px;
+        margin-bottom: 5px;
+        color: #000;
+        opacity: 0.8;
+    }
+    .footer-column ul li img {
+        width: 16px;
+        height: 16px;
+        margin-left: 5px;
+    }
+    .footer-column a {
+        text-decoration: none;
+        color: #000;
+    }
+}
+@media (max-width: 480px) {
+    .footer {
+        padding: 15px 10px;
+    }
+    .logo-section {
+        flex-direction: row;
+        justify-content: center;
+        position: relative;
+        top: auto;
+        right: auto;
+        gap: 15px;
+        margin-bottom: 20px;
+    }
+    .social-icons {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin: 0 auto;
+        width: 100%;
+       margin-left: -26%;
+    }
+    .divider {
+        margin: 15px auto;
+        width: 80%;
+    }
+    .footer-bottom {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        direction: rtl;
+        text-align: center;
+        padding-bottom: 20px;
+        margin-right: -8%;
+        }
+    .footer-column, .column1 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 7px;
+    }
+    .column1 h4{
+        margin-left: 38px;
+    }
+    .footer-column h4, .column1 h4 {
+        font-family: 'Yekan Bakh FaNum', sans-serif;
+        font-size: 18px; 
+        font-weight: bold;
+        margin-bottom: 5px; 
+        color: #000;
+    }
+    .column1 p {
+        font-size: 14px; 
+        line-height: 1.8; 
+        color: #000;
+        margin: 0; 
+        text-align: center;
+    }
+    .footer-column ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    .footer-column ul li {
+        font-size: 14px;
+        margin-bottom: 8px; 
+        color: #000;
+        opacity: 0.9;
+    }
+    .footer-column ul li img {
+        width: 16px;
+        height: 16px;
+        margin-left: -33px;
+    }
+    .footer-column a {
+        text-decoration: none;
+        color: #000;
+        font-size: 14px;
+        margin-top: 5px; 
+    }
 }

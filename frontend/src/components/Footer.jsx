@@ -15,10 +15,10 @@ export default function Footer() {
     ]
 
     return (
-        <footer className="footer">
-            <FooterTop icons={icons}/>
+        <footer id="about" className="relative w-full mx-0 my-">
+            <FooterTop icons={icons} />
             <div className="divider"></div>
-            <FooterBottom/>
+            <FooterBottom />
         </footer>
     )
 }
@@ -32,8 +32,7 @@ function FooterTop({icons}) {
             <div className="social-icons">
                 {/* eslint-disable-next-line react/prop-types */}
                 {icons.map((icon) => (
-                        // eslint-disable-next-line react/jsx-key
-                        <SocialIcons icon={icon.icon} iconClass={icon.class} iconAlt={icon.alt}/>
+                        <SocialIcons key={icon.alt} icon={icon.icon} iconClass={icon.class} iconAlt={icon.alt}/>
                     )
                 )}
             </div>
@@ -44,10 +43,10 @@ function FooterTop({icons}) {
 function FooterBottom() {
     return (
         <div className="footer-bottom">
-            <About/>
-            <FavoriteCourse/>
-            <Teachers/>
-            <ContactUs/>
+            <About />
+            <FavoriteCourse />
+            <Teachers />
+            <ContactUs />
         </div>
     )
 }
@@ -133,7 +132,7 @@ function ContactUs() {
             <ul>
                 {contacts.map((contact) => (
                     // eslint-disable-next-line react/jsx-key
-                    <li>
+                    <li key={contact.name}>
                         <Contact
                             href={contact.href}
                             name={contact.name}
