@@ -5,6 +5,9 @@ class Token(BaseModel):
     access_token: str
     token_type: str
 
+class CheckAdmin(BaseModel):
+    isAdmin: bool
+
 
 class BaseUser(BaseModel):
     username: str

@@ -1,4 +1,4 @@
-import {Helmet} from "react-helmet";
+import {Helmet, HelmetProvider} from "react-helmet-async";
 import {useState} from "react";
 import Alert from "@mui/material/Alert";
 import {useMutation} from "@tanstack/react-query";
@@ -8,7 +8,7 @@ import {FaEye, FaEyeSlash} from "react-icons/fa";
 
 export default function Login() {
     return (
-        <>
+        <HelmetProvider>
             <Helmet>
                 <title>ورود به برنامه نویس</title>
             </Helmet>
@@ -19,7 +19,7 @@ export default function Login() {
                     <LoginFooter />
                 </div>
             </div>
-        </>
+        </HelmetProvider>
     )
 }
 

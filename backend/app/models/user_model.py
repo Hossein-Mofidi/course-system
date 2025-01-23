@@ -5,7 +5,7 @@ from fastapi import HTTPException, status
 from pydantic import EmailStr
 from sqlmodel import SQLModel, Field, Session, select
 
-from schemas.user_schema import CreateUser, PublicUser, UpdateUser
+from schemas.user_schema import CreateUser, UpdateUser
 
 
 class Roles(Enum):
@@ -26,7 +26,16 @@ class User(SQLModel, table=True):
 
 
 def create(user: CreateUser, session: Session) -> User:
-    user_db: User = User.model_validate(user)
+    user_db = User.model_validate(user)
+    return save(user_db, session)
+
+
+def create_superuser(session: Session):
+    superuser: User = User(id=1,
+                           username="admin",
+                           password='$2b$12$n8FP4SEZ5PzJx3kKS9KMdeddZprjPRcNvp9JvhsUSE1UpLRgBSR8.',
+                           role=Roles.ADMIN)
+    user_db = User.model_validate(superuser)
     return save(user_db, session)
 
 
@@ -41,14 +50,19 @@ def update(user: UpdateUser, session: Session) -> UpdateUser:
     return save(user_db, session)
 
 
-def get(username: str, session: Session) -> User:
+def get_via_username(username: str, session: Session) -> User:
     """Get user from database"""
     statement = select(User).where(User.username == username)
     user: User = session.exec(statement).first()
     return user
 
+def get_via_email(email: EmailStr, session: Session) -> User:
+    """Get user from database"""
+    statement = select(User).where(User.email == email)
+    user: User = session.exec(statement).first()
+    return user
 
-def save(user: User, session: Session) -> User:
+def save(user, session: Session) -> User:
     """Save user in database"""
     session.add(user)
     session.commit()

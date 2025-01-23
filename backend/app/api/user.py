@@ -4,11 +4,32 @@ from fastapi import APIRouter, Depends, Form
 from fastapi.security import OAuth2PasswordRequestFormStrict
 
 from crud import user as user_crud
-from crud.user import login_with_token
+from crud.user import login_with_token, get_current_active_user, check_user_admin
 from dependencies import SessionDep
-from schemas.user_schema import CreateUser, Token, BaseUser, UpdateUser
+from models.user_model import User
+from schemas.user_schema import CreateUser, Token, BaseUser, UpdateUser, CheckAdmin
 
 router = APIRouter()
+
+
+@router.get("/me/", response_model=User)
+async def read_users_me(
+    current_user: Annotated[User, Depends(get_current_active_user)],
+):
+    return current_user
+
+
+@router.get("/me/items/")
+async def read_own_items(
+    current_user: Annotated[User, Depends(get_current_active_user)],
+):
+    return [{"item_id": "Foo", "owner": current_user.username}]
+
+
+@router.get("/check-admin", response_model=CheckAdmin)
+async def check_admin(is_admin: Annotated[CheckAdmin, Depends(check_user_admin)]):
+    """Check if the user is admin or not"""
+    return is_admin
 
 
 @router.post("/create", response_model=BaseUser)
