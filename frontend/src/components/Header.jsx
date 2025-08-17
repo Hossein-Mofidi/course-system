@@ -1,37 +1,58 @@
 import headerIcon from '../assets/icons/headerIcon.svg';
+import profileIcon from '../assets/icons/profile.svg';
 import {Link, useNavigate} from "react-router-dom";
+import {RxHamburgerMenu} from "react-icons/rx";
 
 export default function Header() {
     const navbarItems = [
         {item: 'صفحه اصلی', href: '/'},
-        {item: 'دوره های آموزشی', href: ''},
+        {item: 'دوره های آموزشی', href: '/courses'},
         {item: 'درباره ما', href: '#about'},
-    ]
+    ];
 
-    let navigate = useNavigate()
+    let navigate = useNavigate();
 
     return (
         <header
-            className="md:h-[95px] md:py-[10 px] max-[480px]:h-auto max-[480px]:p-[10px_15px] max-[480px]:flex max-[480px]:flex-col max-[480px]:items-center relative top-10 w-[95%] h-[95px] bg-white shadow-[0_11px_200px_rgba(0,0,0,0.1)] rounded-b-[20px] flex justify-between items-center px-4 md:px-10 box-border mx-auto max-w-[1440px]">
-            <div className="relative w-full max-w-[1440px] h-full flex justify-between items-center mx-auto box-border">
-                <Navbar items={navbarItems}/>
-
-                <Link to="/">
-                    <img src="/logo.svg" alt="لوگو آکادمی"
-                         className="h-[59px] w-[80px] md:w-[120px] transition-opacity duration-300 hover:opacity-80"/>
-                </Link>
-
-                <div className="flex items-center gap-4 md:gap-10">
-                    <img src={headerIcon} alt="icon"
-                         className="w-[40px] h-[40px] md:w-[52px] md:h-[52px] rounded-[5px] cursor-pointer transition-opacity duration-200 hover:opacity-70"/>
-
-                    <button onClick={() => {
-                        navigate("/login")
-                    }}
-                            className="w-[120px] md:w-[166px] h-[40px] md:h-[52px] bg-[#3A31C2] text-[#F9F9F9] font-yekan text-sm md:text-lg font-medium leading-[24px] md:leading-[28px] text-center border-none rounded-[5px] cursor-pointer transition-colors duration-200 hover:opacity-80 hover:bg-[#130d6e]">
-                        ورود / ثبت نام
-                    </button>
+            className="flex flex-row my-9 mx-4 md:mx-12 lg:mx-24 py-4 px-4 md:px-9 justify-between items-center bg-white rounded-md">
+            {/* بخش چپ: آیکون همبرگر */}
+            <div className="md:flex-1 flex justify-start items-center">
+                <div className="md:hidden bg-gray-100 p-3.5 rounded-md">
+                    <RxHamburgerMenu className="text-md cursor-pointer h-[24px] w-auto"/>
                 </div>
+
+                <div className="hidden md:flex">
+                    <Navbar items={navbarItems}/>
+                </div>
+            </div>
+
+            {/* بخش وسط: لوگو آکادمی */}
+            <Link to="/" className="hover:opacity-70 transition-opacity duration-300">
+                <img src="/logo.svg" alt="لوگو آکادمی"/>
+            </Link>
+
+            {/* بخش راست: آیکون‌ها و دکمه‌ها */}
+            <div className="md:flex-1 flex justify-end gap-3 md:gap-5 items-center">
+                <img
+                    src={headerIcon}
+                    alt="icon"
+                    className="h-[52px] cursor-pointer w-auto hover:opacity-70 transition-opacity duration-300"
+                />
+
+                <div className="md:hidden p-3.5 bg-[#3A31C2] rounded-md">
+                    <img
+                        src={profileIcon}
+                        alt="پروفایل"
+                        className="h-[24px] w-auto"
+                    />
+                </div>
+
+                <button
+                    onClick={() => navigate("/login")}
+                    className="hidden md:block hover:bg-blue-900 bg-[#3A31C2] text-white rounded-md px-6 py-3 md:px-8 md:py-3.5 font-bold transition-colors duration-300"
+                >
+                    ورود / ثبت نام
+                </button>
             </div>
         </header>
     );
@@ -40,15 +61,11 @@ export default function Header() {
 // eslint-disable-next-line react/prop-types
 function Navbar({items}) {
     return (
-        <nav className="flex items-center gap-20">
-        <ul className="list-none flex flex-wrap gap-5">
-                {/* eslint-disable-next-line react/prop-types */}
-                {items.map((item, index) => (
-                    <li className="nav-item" key={index}>
-                        <NavbarItem item={item.item} href={item.href}/>
-                    </li>
-                ))}
-            </ul>
+        <nav className="flex flex-row gap-3 items-center font-medium text-md">
+            {/* eslint-disable-next-line react/prop-types */}
+            {items.map((item) => (
+                <NavbarItem key={item.item} item={item.item} href={item.href}/>
+            ))}
         </nav>
     );
 }
@@ -56,7 +73,11 @@ function Navbar({items}) {
 // eslint-disable-next-line react/prop-types
 function NavbarItem({item, href}) {
     return (
-        <Link to={href} className="text-sm md:text-base font-yekan font-bold text-black no-underline transition-colors
-        hover:text-[#3A31C2]">{item}</Link>
+        <Link
+            to={href}
+            className="font-bold text-gray-700 hover:text-blue-600 hover:bg-gray-100 rounded-md transition-colors duration-300 px-4 py-2"
+        >
+            {item}
+        </Link>
     );
 }

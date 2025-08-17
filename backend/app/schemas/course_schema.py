@@ -1,3 +1,5 @@
+from pathlib import Path
+
 from pydantic import BaseModel
 
 
@@ -9,7 +11,8 @@ class BaseCourse(BaseModel):
     student_count: int = 0
     session_count: int
     duration_hours: int
-    instructor_id: int | None = None
+    instructor_id: int
+    image_path: Path | None = None
 
 
 class GetCourse(BaseCourse):
@@ -17,7 +20,7 @@ class GetCourse(BaseCourse):
 
 
 class CreateCourse(BaseCourse):
-    pass
+    video_path: Path | None = None
 
 
 class UpdateCourse(BaseCourse):

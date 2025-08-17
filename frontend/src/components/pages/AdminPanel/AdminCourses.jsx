@@ -4,7 +4,7 @@ import {useNavigate} from "react-router-dom";
 import Alert from "@mui/material/Alert";
 import {Helmet, HelmetProvider} from "react-helmet-async";
 
-export default function Courses() {
+export default function AdminCourses() {
     const [courses, setCourses] = useState([]);
     const [error, setError] = useState(null);
     const [loading, setLoading] = useState(true);

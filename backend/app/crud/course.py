@@ -1,9 +1,26 @@
+import os
+
 from sqlmodel import Session, select
-from fastapi import HTTPException, status
+from fastapi import HTTPException, status, UploadFile
 
 from models.user_model import User
 from schemas.course_schema import UpdateCourse, CreateCourse
-from models.course_model import Course
+from models.course_model import Course, save
+
+UPLOAD_DIR = "courses/images"
+os.makedirs(UPLOAD_DIR, exist_ok=True)
+
+def save_course_image(course_id: int, file: UploadFile) -> str:
+    # ایجاد نام فایل منحصر به فرد
+    file_extension = os.path.splitext(file.filename)[1]
+    file_name = f"course_{course_id}{file_extension}"
+    file_path = os.path.join(UPLOAD_DIR, file_name)
+
+    # ذخیره‌سازی فایل
+    with open(file_path, "wb") as buffer:
+        buffer.write(file.file.read())
+
+    return file_path
 
 
 def get_all_courses(session: Session) -> list[Course]:
@@ -27,13 +44,16 @@ def get_course_by_title(course_title: str, session: Session):
     return result
 
 
-def create_course(course: CreateCourse, session: Session, user_id: int):
+def create_course(
+        course: CreateCourse,
+        session: Session,
+        user_id: int,
+        videofile: UploadFile,
+        image_file: UploadFile | None):
     course.instructor_id = user_id
+    image_
     course_db = Course.model_validate(course)
-    session.add(course_db)
-    session.commit()
-    session.refresh(course_db)
-    return course_db
+    return save(course_db, session)
 
 
 def update_course(course: UpdateCourse, session: Session, user_id: int):
@@ -44,10 +64,7 @@ def update_course(course: UpdateCourse, session: Session, user_id: int):
 
     course_data = course.model_dump(exclude_unset=True)
     course_db.sqlmodel_update(course_data)
-    session.add(course_db)
-    session.commit()
-    session.refresh(course_db)
-    return course_db
+    return save(course_db, session)
 
 
 def delete_course_by_id(course_id: int, session: Session, current_user: User):

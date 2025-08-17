@@ -1,6 +1,6 @@
 from typing import Annotated
 
-from fastapi import APIRouter, Form
+from fastapi import APIRouter, Form, UploadFile
 
 from crud.user import UserDep
 from models.course_model import Course
@@ -30,8 +30,10 @@ def get_course_by_title(course_title: str, session: SessionDep) -> list[GetCours
 async def create_course(
         course: Annotated[CreateCourse, Form()],
         session: SessionDep,
-        current_user: UserDep) -> GetCourse:
-     return course_crud.create_course(course, session, current_user.id)
+        current_user: UserDep,
+        video_file: UploadFile,
+        image_file: UploadFile | None = None) -> GetCourse:
+     return course_crud.create_course(course, session, current_user.id, video_file, image_file)
 
 
 @router.patch('/update', response_model_exclude=["password"], response_model_exclude_none=True)

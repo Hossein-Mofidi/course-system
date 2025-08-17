@@ -1,7 +1,12 @@
 import Header from "../Header.jsx";
-import './LandingPage.css'
-import heroModel from '../../assets/icons/model.svg'
 import Footer from "../Footer.jsx";
+import model from "../../assets/icons/model.svg";
+import vector from "../../assets/icons/vector.svg";
+import wallet from "../../assets/icons/wallet.svg";
+import video from "../../assets/icons/video.svg";
+import user from "../../assets/icons/user.svg";
+import setting from "../../assets/icons/setting.svg";
+import CountUp from "react-countup";
 
 export default function LandingPage() {
     return (
@@ -16,88 +21,52 @@ export default function LandingPage() {
 function Main() {
     return (
         <main>
-            <section className="hero">
-                <HeroStats/>
-                <HeroModel/>
-                <div className="hero-content">
-                    <h1 className="hero-title">آکادمی آموزشی برنامه‌نویسی پیشرفته</h1>
-                    <div className="hero-actions">
-                        <a href="#" className="contact-link">ارتباط با ما</a>
-                        <button className="hero-button">
-                            <span className="button-icon">
-                            <img src="Asset/flashIcon.svg" alt="فلش"/>
-                            </span>
-                            <span className="button-text">شروع یادگیری برنامه نویسی</span>
-                        </button>
-                    </div>
-                </div>
-            </section>
-            <section className="features">
-                <p className="features-subtitle">ویژگی های ما</p>
-                <h2 className="features-title">چرا باید سایت ما رو انتخاب کنید؟</h2>
-                <div className="features-cards">
-                    <div className="card-wallet">
-                        <div className="card-icon-wallet">
-                            <img src="Asset/wallet.svg" alt="آیکون کیف پول"/>
-                        </div>
-                        <p className="card-text">از هر دوره‌ای ناراضی بودی میتونی درخواست بازگشت وجه بدی</p>
-                    </div>
-                    <div className="card-setting">
-                        <div className="card-icon-setting">
-                            <img src="Asset/setting.svg" alt="آیکون تنظیمات"/>
-                        </div>
-                        <p className="card-text">دوره‌های ما برنامه محور برای کسب مهارت انجام پروژه‌های واقعی
-                            هستند</p>
-                    </div>
-                    <div className="card-profile">
-                        <div className="card-icon-profile">
-                            <img src="Asset/profile.svg" alt="آیکون پروفایل"/>
-                        </div>
-                        <p className="card-text">بهترین اساتید از سر تا سر کشور برای شما انتخاب شده‌اند</p>
-                    </div>
-                    <div className="card-video-play">
-                        <div className="card-icon-video-play">
-                            <img src="video.svg" alt="آیکون پخش ویدیو"/>
-                        </div>
-                        <p className="card-text">بزار خیالتو راحت کنم توی دوره ها به ریز ترین موارد پرداختیم </p>
-                    </div>
-                </div>
-            </section>
-            <section id="courses" className="courses">
-                <div className="courses-title">دوره های آموزشی</div>
-                <div className="line-container">
-                    <div className="line-1"></div>
-                    <div className="line-1-diamond"></div>
-                </div>
-                <div className="course-tabs">
-                    <button className="tab">دسکتاپ</button>
-                    <button className="tab">اندروید</button>
-                    <button className="tab">بک اند</button>
-                    <button className="tab">فرانت اند</button>
-                </div>
+            <Hero/>
+            <Properties/>
 
-                <div id="courses-section">
-
-                </div>
-            </section>
         </main>
+    )
+}
+
+function Hero() {
+    return (
+        <section className="flex flex-col md:flex-row items-center justify-center w-full gap-8 md:gap-16">
+            <div className="text-center md:text-right">
+                <h1 className="font-modam font-bold text-3xl md:text-5xl leading-normal">
+                    آکادمی آموزش<br/>برنامه‌نویسی پیشرفته
+                </h1>
+                <div className="flex mt-6 items-center justify-center gap-6 md:gap-12">
+                    <button
+                        className="bg-[#3A31C2] hover:bg-blue-900 transition-colors duration-300 text-white rounded-md py-2 md:py-3 px-5 md:px-7">
+                        <pre className="font-yekan inline">شروع یادگیری برنامه نویسی   </pre>
+                        <img src={vector} className="inline" alt=""/>
+                    </button>
+                    <a href="#"
+                       className="font-medium p-4 text-gray-700 hover:text-blue-600 hover:bg-gray-300 rounded-md transition-colors duration-300">
+                        ارتباط با ما
+                    </a>
+                </div>
+            </div>
+            <div className="mt-8 md:mt-0">
+                <img src={model} alt="مدل" className="w-64 md:w-auto h-auto"/>
+            </div>
+            <HeroStats/>
+        </section>
     )
 }
 
 function HeroStats() {
     const heroStats = [
-        {class: 'm', value: '+18', content: 'متخصص مجرب'},
-        {class: 'a', value: '+24', content: 'دوره آموزشی موفق'},
-        {class: 'h', value: '+150', content: 'هنرجوی موفق'},
+        {value: 18, content: 'متخصص مجرب'},
+        {value: 24, content: 'دوره آموزشی موفق'},
+        {value: 150, content: 'هنرجوی موفق'},
     ]
 
     return (
-        <div className="hero-stats">
+        <div className="hidden md:block">
             {heroStats.map((heroStat) => (
-                    // eslint-disable-next-line react/jsx-key
                     <HeroStat
                         key={heroStat.value}
-                        classContent={heroStat.class}
                         value={heroStat.value}
                         content={heroStat.content}/>
                 )
@@ -107,23 +76,54 @@ function HeroStats() {
 }
 
 // eslint-disable-next-line react/prop-types
-function HeroStat({classContent, value, content}) {
+function HeroStat({value, content}) {
     return (
-        <div className="stat-item">
-            <p className="stat-value">{value}</p>
-            <p className={`stat-label ${classContent}`}>{content}</p>
+        <div className="text-center mb-9">
+            <h2 className="font-bold text-4xl">
+                <CountUp start={0} duration={3} end={value}/>+
+            </h2>
+            <p className="text-gray-600">{content}</p>
         </div>
     )
 }
 
-function HeroModel() {
+
+function Properties() {
+    const properties = [
+        {text: "بزار خیالتو راحت کنم توی دوره ها به ریز ترین موارد پرداختیم.", icon: video},
+        {text: "بهترین اساتید از سرتاسر کشور برای شما انتخاب شده اند.", icon: user},
+        {text: "دوره های ما پروژه محور برای کسب مهارت انجام پروژه های واقعی", icon: setting},
+        {text: "از هر دوره ای ناراضی بودی میتونی درخواست بازگشت وجه بدی.", icon: wallet},
+    ];
+
     return (
-        <div className="hero-model">
-            <div className="background-purple"></div>
-            <div className="background-gradient"></div>
-            <div className="model-image">
-                <img src={heroModel} alt="مدل"/>
+        <section className="text-center mt-32">
+            <p className="text-gray-600">ویژگی های ما</p>
+            <h2 className="font-bold text-3xl font-modam mt-4">چرا باید سایت ما رو انتخاب کنید؟</h2>
+            <div className="flex gap-8 justify-center items-center mt-20">
+                {properties.map((property, index) => (
+                    <Property
+                        key={property.icon}
+                        text={property.text}
+                        icon={property.icon}
+                        className={index === 0 || index === properties.length - 1 ? "mt-[-100px]" : ""}
+                    />
+                ))}
             </div>
+        </section>
+    );
+}
+
+// eslint-disable-next-line react/prop-types
+function Property({text, icon, className}) {
+    return (
+        <div
+            className={`group cursor-pointer hover:bg-[#E5F2CD] hover:-translate-y-[10px] hover:shadow-xl transition-all duration-300 bg-white rounded-3xl shadow-lg flex flex-col items-start w-60 h-50 ${className}`}>
+            <div
+                className="flex bg-[#3A31C2] p-4 my-7 mx-5 rounded-xl group-hover:rotate-[360deg] transition-all duration-300">
+                <img src={icon} alt="آیکون" className="w-8 h-8 group-hover:opacity-50 transition-opacity duration-300"/>
+            </div>
+            <p className="text-right mx-5 mb-10 text-gray-700 font-medium">{text}</p>
         </div>
-    )
+    );
 }
